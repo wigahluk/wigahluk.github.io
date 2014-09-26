@@ -1,0 +1,14 @@
+{
+    "name": "wigahluk-page",
+    "description": "Another starting project for personal pages using AngulaJS",
+    "version": "0.0.0",
+    "homepage": "https://wigahluk.github.io",
+    "license": "The Artistic License 2.0",
+    "private": true,
+    "dependencies": {
+        "angular": "1.2.x",
+        "angular-route": "1.2.x",
+        "angular-loader": "1.2.x",
+        "angular-mocks": "~1.2.x"
+    }
+}
