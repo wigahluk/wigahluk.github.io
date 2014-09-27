@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="wPage">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Wigahluk (Oscar Ponce Bañuelos)</title>
+    <title>{{ appTitle }}</title>
 </head>
 <body>
-    <h1>{ wigahluk: 'Oscar Ponce Bañuelos' }</h1>
-I'm a software developer working at a startup company and in the meantime doing a bit of everything.
-<!-- This is in fact the first commit, I'm just adding some basic HTML to the index page, but the intention is to have
-this thing running with Angular and using it as a tool to help other to learn AngularJS.
+    <div ng-view></div>  <!-- This is the main container where Angular will put all the stuff -->
+
+<!-- I'm just adding some basic HTML to the index page, but the intention is to have
+ this thing running with Angular and using it as a tool to help other to learn AngularJS.
  Just added some more files, not content. AngularJS and a couple of dependencies. Lets keep this simple.
+ Controllers and routes added. I think this will work as a pretty basic setup.
  -->
     <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/home/app.js"></script>
 </body>
 </html>
