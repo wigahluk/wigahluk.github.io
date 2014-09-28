@@ -26,7 +26,6 @@
                         selectedTab.active = false;
                         selectedTab = tab;
                         selectedTab.active = true;
-                        console.log(selectedTab);
                     };
                 }
             };
