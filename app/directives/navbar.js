@@ -26,6 +26,7 @@
                         selectedTab.active = false;
                         selectedTab = tab;
                         selectedTab.active = true;
+                        $location.url(selectedTab.url);
                     };
                 }
             };
