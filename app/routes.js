@@ -12,6 +12,10 @@
                 controller:'home/app', // I name the main controller on each page as 'app' as a personal preference.
                 templateUrl:'app/home/app.html'
             })
+                .when('/books', {
+                    controller:'books/app',
+                    templateUrl:'app/books/app.html'
+                })
                 .otherwise({
                     redirectTo:'/'
                 });
