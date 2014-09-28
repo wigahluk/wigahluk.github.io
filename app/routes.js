@@ -8,10 +8,11 @@
     angular.module('wPage', ['ngRoute']).config([
         '$routeProvider',
         function ($routeProvider) {
-            $routeProvider.when('/', {
-                controller:'home/app', // I name the main controller on each page as 'app' as a personal preference.
-                templateUrl:'app/home/app.html'
-            })
+            $routeProvider
+                .when('/', {
+                    controller:'home/app', // I name the main controller on each page as 'app' as a personal preference.
+                    templateUrl:'app/home/app.html'
+                })
                 .when('/books', {
                     controller:'books/app',
                     templateUrl:'app/books/app.html'
@@ -27,6 +28,10 @@
         '$rootScope',
         function ($rootScope) {
             $rootScope.appTitle = 'Wigahluk (Oscar Ponce Bañuelos)';
+            $rootScope.appTabs = [
+                { url: '/', text: 'wigahluk' },
+                { url: '/books', text: 'Book recommendations' },
+            ];
         }
     ])
 } (angular));
