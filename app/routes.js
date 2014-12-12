@@ -17,13 +17,17 @@
                     controller:'books/app',
                     templateUrl:'app/books/app.html'
                 })
+                .when('/about', {
+                    controller:'about/app',
+                    templateUrl:'app/about/app.html'
+                })
                 .otherwise({
                     redirectTo:'/'
                 });
         }
     ]);
 
-    // In case you want to define some stiff to be available globally, use this.
+    // In case you want to define some stuff to be available globally, use this.
     angular.module('wPage').run([
         '$rootScope',
         function ($rootScope) {
@@ -31,7 +35,8 @@
             $rootScope.appTabs = [
                 { url: '/', text: 'wigahluk' },
                 { url: '/books', text: 'Book recommendations' },
+                { url: '/about', text: 'About' }
             ];
         }
-    ])
+    ]);
 } (angular));
