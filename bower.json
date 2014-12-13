@@ -10,6 +10,9 @@
         "angular-route": "1.2.x",
         "angular-loader": "1.2.x",
         "angular-mocks": "~1.2.x",
-        "lodash": "2.4.x"
+        "angular-sanitize": "1.2.x",
+        "lodash": "2.4.x",
+        "showdown": "0.3.x",
+        "angular-markdown-directive": "0.3.x"
     }
 }
