@@ -5,7 +5,7 @@
 (function (angular) {
     'use strict';
 
-    angular.module('wPage', ['ngRoute', 'btford.markdown']).config([
+    angular.module('wPage', ['ngRoute', 'btford.markdown', 'angulartics', 'angulartics.google.analytics']).config([
         '$routeProvider',
         function ($routeProvider) {
             $routeProvider

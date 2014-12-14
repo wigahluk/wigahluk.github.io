@@ -13,6 +13,7 @@
         "angular-sanitize": "1.2.x",
         "lodash": "2.4.x",
         "showdown": "0.3.x",
-        "angular-markdown-directive": "0.3.x"
+        "angular-markdown-directive": "0.3.x",
+        "angulartics": "0.17.x"
     }
 }
