@@ -3,7 +3,7 @@
 
     angular.module('wPage').controller('home/app', [
         '$scope',
-        function ($scope) {
+        function ($scope, $http) {
             $scope.name = 'My Name';
         }
     ]);
