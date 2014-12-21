@@ -79,3 +79,37 @@ div.post .topText {
 div.post .bottomText {
 
 }
+
+/* Book listings */
+div.book-listing {
+    padding: 12px;
+    clear: both;
+}
+div.book-listing .cover {
+    float: left;
+    margin-right: 20px;
+    background-color: #B7B7B8;
+}
+div.book-listing h1 {
+    font-family: 'Raleway', Arial, Helvetica, Sans-serif;
+    margin-top: 0;
+    font-weight: 200;
+    font-size: 35px;
+}
+div.book-listing .notes {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* SVG Icons */
+.star {
+    width: 20px;
+    height: 20px;
+}
+.star-gray {
+    fill: #555555;
+}
+.star-yellow {
+    fill: #ECAA32;
+}
+

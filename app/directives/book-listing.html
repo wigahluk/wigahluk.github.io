@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="book-listing">
+            <div class="cover thumbnail">
+                <a href="{{book.amazonLink}}"><img src="{{book.cover}}" alt="{{book.title}}"/></a>
+            </div>
+
+            <h1 class="title">{{book.title}} <small>
+                <star-rating rating="{{book.stars}}"></star-rating>
+            </small></h1>
+            <div>By {{book.author}}</div>
+            <div class="notes">
+                <btf-markdown ng-include="fileUri">
+                </btf-markdown>
+            </div>
+            <div><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>
+        </div>
+    </div>
+</div>

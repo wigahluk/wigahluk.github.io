@@ -34,7 +34,7 @@
             $rootScope.appTitle = 'Wigahluk (Oscar Ponce Bañuelos)';
             $rootScope.appTabs = [
                 { url: '/', text: 'wigahluk' },
-                { url: '/books', text: 'Book recommendations' },
+                { url: '/books', text: 'Bookshelf' },
                 { url: '/about', text: 'About' }
             ];
         }

@@ -38,3 +38,5 @@ Lets create a very simple directive for posts (BTW it is nicer to write texts in
 
 I'm not sure I want to support comments and all these fancy features a common blog has. For now, this blog is pretty unknown and is more an exercise and a toy than a real
 publishing platform.
+
+Next thing was to create a nicer directive for book recommendations. That's done. I need to write some of them now :).
