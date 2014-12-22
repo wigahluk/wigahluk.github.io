@@ -1,0 +1,2 @@
+This is not exactly a book, I mean, in the sense that it can be read in a printed traditional book or that is published by
+a known publisher, but is a very interesting reading about reactive programming.

@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-md-12">
         <div class="book-listing">
-            <div class="cover thumbnail">
-                <a href="{{book.amazonLink}}"><img src="{{book.cover}}" alt="{{book.title}}"/></a>
+            <div class="cover thumbnail" ng-show="hasCover">
+                <a href="{{link}}"><img src="{{book.cover}}" alt="{{book.title}}"/></a>
             </div>
 
             <h1 class="title">{{book.title}} <small>
@@ -13,7 +13,8 @@
                 <btf-markdown ng-include="fileUri">
                 </btf-markdown>
             </div>
-            <div><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>
+            <div ng-show="hasAmazon"><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>
+            <div ng-show="hasGitHub"><a href="{{book.gitHubLink}}">Open <em>{{book.title}}</em> on GitHub</a></div>
         </div>
     </div>
 </div>
