@@ -21,6 +21,14 @@
                     author: 'André Staltz',
                     stars: 5
                 }
+                ,
+                {
+                    title: 'Gitlet: Git in six hundred words',
+                    notes: 'gitlet',
+                    gitHubLink: 'http://maryrosecook.com/blog/post/git-in-six-hundred-words',
+                    author: 'Mary Rose Cook',
+                    stars: 5
+                }
             ];
 
 
