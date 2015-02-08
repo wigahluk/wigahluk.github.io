@@ -1,0 +1,1 @@
+A very opinionated but also very interesting and complete summary of the basics on rhe ALCM for a front end applicatuon.

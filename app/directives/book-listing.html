@@ -15,6 +15,7 @@
             </div>
             <div ng-show="hasAmazon"><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>
             <div ng-show="hasGitHub"><a href="{{book.gitHubLink}}">Open <em>{{book.title}}</em> on GitHub</a></div>
+            <div ng-show="onlyLink"><a href="{{book.link}}">Open <em>{{book.title}}</em></a></div>
         </div>
     </div>
 </div>

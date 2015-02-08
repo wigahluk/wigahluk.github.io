@@ -20,14 +20,20 @@
                     gitHubLink: 'https://gist.github.com/staltz/868e7e9bc2a7b8c1f754',
                     author: 'André Staltz',
                     stars: 5
-                }
-                ,
+                },
                 {
                     title: 'Gitlet: Git in six hundred words',
                     notes: 'gitlet',
                     gitHubLink: 'http://maryrosecook.com/blog/post/git-in-six-hundred-words',
                     author: 'Mary Rose Cook',
                     stars: 5
+                },
+                {
+                    title: 'Planning A Front-end JavaScript Application',
+                    notes: 'planning-a-front-end-js-app',
+                    link: 'http://developer.telerik.com/featured/planning-front-end-javascript-application/',
+                    author: 'Cody Lindley',
+                    stars: 4
                 }
             ];
 
