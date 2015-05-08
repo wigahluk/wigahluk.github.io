@@ -51,6 +51,13 @@ div.post .article {
     padding: 0px 20px 20px 20px;
 }
 
+div.post a {
+    text-decoration: none;
+}
+div.post a:hover {
+    text-decoration: none;
+}
+
 div.post h1 {
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-weight: 200;

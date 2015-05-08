@@ -21,9 +21,13 @@
                     var selectedTab = _.find(tabs, function (tab) {
                         return tab.url === $location.path();
                     });
-                    selectedTab.active = true;
+                    if (selectedTab) {
+                        selectedTab.active = true;
+                    }
                     scope.selectTab = function (tab) {
-                        selectedTab.active = false;
+                        if (selectedTab) {
+                            selectedTab.active = false;
+                        }
                         selectedTab = tab;
                         selectedTab.active = true;
                         $location.url(selectedTab.url);

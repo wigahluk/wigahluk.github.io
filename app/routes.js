@@ -5,7 +5,7 @@
 (function (angular) {
     'use strict';
 
-    angular.module('wPage', ['ngRoute', 'btford.markdown', 'angulartics', 'angulartics.google.analytics']).config([
+    angular.module('wPage', ['ngRoute', 'angulartics', 'angulartics.google.analytics', 'ngSanitize']).config([
         '$routeProvider',
         function ($routeProvider) {
             $routeProvider
@@ -20,6 +20,11 @@
                 .when('/about', {
                     controller:'about/app',
                     templateUrl:'app/about/app.html'
+                })
+
+                .when('/post/:post', {
+                    controller:'controller/post',
+                    templateUrl:'app/controllers/views/post.html'
                 })
                 .otherwise({
                     redirectTo:'/'

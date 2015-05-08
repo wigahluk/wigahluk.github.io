@@ -18,6 +18,7 @@
                     scope.month = dateParts[0];
                     scope.year = dateParts[2];
                     scope.fileUri = "posts/" + scope.file + ".md";
+                    scope.link = "#/post/" + scope.file;
                 }
             };
         }
