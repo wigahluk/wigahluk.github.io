@@ -3,6 +3,10 @@ body {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNlYWVhZWEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2UyZTJlMiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
 
+.container-fluid {
+    max-width: 1200px;
+}
+
 .nav {
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-weight: 400;
@@ -42,6 +46,9 @@ div.post {
 }
 div.post .article {
     margin: 30px;
+    background-color: rgba(250, 250, 250, 0.57);
+    border-radius: 2px;
+    padding: 0px 20px 20px 20px;
 }
 
 div.post h1 {
@@ -55,26 +62,28 @@ div.post h1 {
 
 div.post .timestamp {
     position: absolute;
+    top: 7px;
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    color: #A5A5A5;;
+    font-size: 16px;
+    color: #A5A5A5;
 }
-div.post .timestamp .img-circle {
+div.post .timestamp .rounded {
     width: 60px;
-    height: 60px;
-    padding-top: 6px;
-    background-color: #c3c3c3;
+    height: 51px;
+    padding-top: 3px;
+    background-color: rgba(223, 223, 223, 1);
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
-    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.07);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 2px;
 }
 div.post .topText {
     display: block;
-    height: 20px;
-    font-size: 26px;
-    color: #F4F4F4;
+    height: 18px;
+    font-size: 20px;
+    color: #969696;
 }
 div.post .bottomText {
 
