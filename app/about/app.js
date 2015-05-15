@@ -3,8 +3,9 @@
 
     angular.module('wPage').controller('about/app', [
         '$scope',
-        function ($scope) {
-            $scope.name = 'My Name';
+        'postService',
+        function ($scope, posts) {
+            $scope.source='README.md';
         }
     ]);
 }(angular));

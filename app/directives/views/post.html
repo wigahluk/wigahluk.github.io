@@ -6,6 +6,7 @@
         </div>
     </div>
     <div class="article">
-        <ng-showdown file="fileUri" link="link"></ng-showdown>
+        <ng-showdown href="link" content="content" source="url" on-load="onLoad" ng-if="!isHtml"></ng-showdown>
+        <div ng-if="isHtml" class="html-container"></div>
     </div>
 </div>

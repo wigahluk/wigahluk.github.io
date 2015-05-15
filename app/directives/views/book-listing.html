@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="book-listing">
-            <div class="cover thumbnail" ng-show="hasCover">
+            <div class="cover thumbnail" ng-if="hasCover">
                 <a href="{{link}}"><img src="{{book.cover}}" alt="{{book.title}}"/></a>
             </div>
 
@@ -10,7 +10,7 @@
             </small></h1>
             <div>By {{book.author}}</div>
             <div class="notes">
-                <ng-showdown file="fileUri">
+                <ng-showdown content="content">
                 </ng-showdown>
             </div>
             <div ng-show="hasAmazon"><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>

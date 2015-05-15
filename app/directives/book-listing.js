@@ -2,17 +2,22 @@
     'use strict';
 
     angular.module('wPage').directive('bookListing', [
-        '$location',
-        function ($location) {
+        'postService',
+        function (posts) {
             return {
                 restrict: 'E',
                 replace: 'true',
-                templateUrl: 'app/directives/book-listing.html',
+                templateUrl: 'app/directives/views/book-listing.html',
                 scope: {
                     book: '='
                 },
                 link: function (scope, element, attrs) {
-                    scope.fileUri = "book-listings/" + scope.book.notes + ".md";
+                    var fileUri = "book-listings/" + scope.book.notes + ".md";
+                    posts.file(fileUri).then(function (bookNotes) {
+                        scope.content = bookNotes.content();
+                    }, function (error) {
+                        console.log('error', error);
+                    });
                     scope.link = scope.book.amazonLink || scope.book.gitHubLink || scope.book.link;
                     scope.hasCover = (scope.book.cover && scope.book.cover.length > 1);
                     scope.hasAmazon = (scope.book.amazonLink && scope.book.amazonLink.length > 1);

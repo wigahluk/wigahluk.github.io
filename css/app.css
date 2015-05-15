@@ -1,14 +1,17 @@
 body {
     font-family: 'Lora', "Bookman", Georgia, "Times New Roman", serif;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNlYWVhZWEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2UyZTJlMiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
+    background-attachment: fixed;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
 
 .container-fluid {
     max-width: 1200px;
 }
+.witt-menu {
+    border-bottom: 1px solid #AEB7BD;
+}
 
 .nav {
-    font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-weight: 400;
 }
 
@@ -17,27 +20,26 @@ body {
 }
 
 .navbar-default {
-    border-color: #2F546E;
-    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.07);
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzJENDQ2RSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzNzRFNzgiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSIjMjgzQjVDIj48L2NpcmNsZT4KPGNpcmNsZSBjeD0iMTAuNSIgY3k9IjEyLjUiIHI9IjEuOCIgZmlsbD0iIzM3NEU3OCI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMS4zIiByPSIxLjgiIGZpbGw9IiMyODNCNUMiPjwvY2lyY2xlPgo8L3N2Zz4=");
+    font-family: 'Raleway', Arial, Helvetica, Sans-serif;
+    border: none;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #C7C7C7;
+    color: #949494;;
 }
 .navbar-default .navbar-nav>li>a:hover {
-    color: #E8E8E8;
+    color: #75AAD8;
 }
 
 .navbar-default .navbar-brand {
-    color: #C7C7C7;
+    color: #949494;;
 }
 .navbar-default .navbar-brand:hover {
-    color: #E8E8E8;
+    color: #75AAD8;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.2);
+    background: none;
 }
 
 div.post {
@@ -46,8 +48,6 @@ div.post {
 }
 div.post .article {
     margin: 30px;
-    background-color: rgba(250, 250, 250, 0.57);
-    border-radius: 2px;
     padding: 0px 20px 20px 20px;
 }
 
