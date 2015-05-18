@@ -17,11 +17,7 @@
             // ArticleInfo
             function ArticleInfo (articleName) {
                 this.file = function () {
-                    var name = "posts/" + articleName;
-                    if (this.type() == 'md') {
-                        name += ".md";
-                    }
-                    return name;
+                    return "posts/" + articleName;
                 };
                 this.type = function () {
                     if (_.endsWith(articleName, 'html')) {
@@ -36,6 +32,18 @@
 
 
             var service = {
+                index: function () {
+                    var q = $q.defer();
+                    $http.get('dist/pindex.json').
+                        success(function (data, status, headers, config) {
+                            var index = data;
+                            q.resolve(data);
+                        }).
+                        error(function (data, status, headers, config) {
+                            q.reject(data);
+                        });
+                    return q.promise;
+                },
                 article: function (articleName) {
                     var q = $q.defer();
                     var info = new ArticleInfo(articleName);

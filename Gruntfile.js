@@ -59,9 +59,6 @@ module.exports = function(grunt) {
                     'dist/wigahluk-page.js': ['.tmp/concat/dist/wigahluk-page.js']
                 }
             }
-        },
-        listPosts: {
-            hello: 'world'
         }
     });
 

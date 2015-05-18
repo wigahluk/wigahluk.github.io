@@ -11,3 +11,10 @@ These are the things I need to do:
 * Generate a JSON file with some metadata for each file: Creation date, title, path.
 * Update my post service to use the generated index file.
 * Update everything else to use this new capability.
+
+Done! :)
+
+I started with npm alone, but after struggling a bit with it and the minification and generation of files, I ended up 
+configuring Grunt for the project.
+ 
+Now I'll start adding all my files to the minification list. But for now, I'm good. 
