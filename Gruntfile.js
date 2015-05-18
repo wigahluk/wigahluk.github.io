@@ -13,41 +13,67 @@ module.exports = function(grunt) {
                 ' **/\n'
             ].join('\n')
         },
-        dirs: {
-            dest: 'dist'
-        },
+//        dirs: {
+//            dest: 'dist'
+//        },
         copy: {
             generated: {
                 src: 'index.src.html',
                 dest: 'index.html'
             }
         },
+        useminPrepare: {
+            html: 'index.src.html',
+            options: {
+                dest: 'dist'
+            }
+        },
         concat: {
             options: {
                 banner: '<%= meta.banner %>'
-            },
-            dist: {
-                src: ['src/*.js'],
-                dest: '<%= dirs.dest %>/<%= pkg.name %>.js'
             }
         },
-        uglify: {
+        usemin: {
+            html: 'index.html'
+        },
+        filerev: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                encoding: 'utf8',
+                algorithm: 'md5',
+                length: 10
             },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+            source: {
+                files: [{
+                    src: [
+                        'dist/*.js',
+                        'dist/*.css'
+                    ]
+                }]
             }
+        },
+        uglify:
+        {
+            my_dist: {
+                files: {
+                    'dist/wigahluk-dependencies.js': ['.tmp/concat/dist/wigahluk-dependencies.js'],
+                    'dist/wigahluk-page.js': ['.tmp/concat/dist/wigahluk-page.js']
+                }
+            }
+        },
+        listPosts: {
+            hello: 'world'
         }
     });
 
+    grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-filerev');
+    grunt.task.loadTasks('grunt-tasks/list-posts');
 
     // Default task(s).
-    grunt.registerTask('default', ['copy']);
+    grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify:my_dist', 'usemin', 'list-posts']);
 
 };
