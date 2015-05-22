@@ -9,6 +9,7 @@
 
             return {
                 restrict: 'E',
+                replace: 'true',
                 template: '<div ng-transclude></div>',
                 transclude: 'true',
                 scope: {

@@ -25,7 +25,7 @@ pre {
 .navbar-default {
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     border: none;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
+    background: none;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -48,6 +48,9 @@ pre {
 div.post {
     position: relative;
     font-size: 16px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 div.post .article {
     margin: 30px;
@@ -62,41 +65,19 @@ div.post a:hover {
 }
 
 div.post h1 {
-    font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-weight: 200;
     font-size: 40px;
-    margin-left: 37px;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 div.post .timestamp {
     position: absolute;
-    top: 7px;
+    top: 31px;
+    left: -14px;
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     color: #A5A5A5;
-}
-div.post .timestamp .rounded {
-    width: 60px;
-    height: 51px;
-    padding-top: 3px;
-    background-color: rgba(223, 223, 223, 1);
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
-    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
-    border-radius: 2px;
-}
-div.post .topText {
-    display: block;
-    height: 18px;
-    font-size: 20px;
-    color: #969696;
-}
-div.post .bottomText {
-
 }
 
 /* Book listings */
