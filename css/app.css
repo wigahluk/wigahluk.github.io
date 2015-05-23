@@ -1,7 +1,7 @@
 body {
+    color: #575757;
     font-family: 'Merriweather', "Bookman", Georgia, "Times New Roman", serif;
-    background-attachment: fixed;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2YyZjJmMiI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
 pre {
     background-color: #E8E8E8;
@@ -11,7 +11,7 @@ pre {
     max-width: 1200px;
 }
 .witt-menu {
-    border-bottom: 1px solid #AEB7BD;
+    border-bottom: 1px solid #D1D8DD;
 }
 
 .nav {
@@ -63,21 +63,28 @@ div.post a {
 div.post a:hover {
     text-decoration: none;
 }
-
+div.post a h1 {
+    color: #8B9DAE;
+}
+div.post a:hover h1 {
+    color: #81A2C2;
+}
 div.post h1 {
     font-weight: 200;
     font-size: 40px;
     padding-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E2E2E2;
 }
 
 div.post .timestamp {
     position: absolute;
-    top: 31px;
-    left: -14px;
+    top: 20px;
+    left: -20px;
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
-    font-size: 12px;
-    color: #A5A5A5;
+    font-size: 13px;
+    color: #D7DBDD;
 }
 
 /* Book listings */
