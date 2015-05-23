@@ -65,3 +65,10 @@ Another library on the top of [D3](http://d3js.org) that also offers neat charts
 This one is part of the [D3](http://d3js.org) libraries, it offers a nice amount of different charts.
 
 [nvd3.org](http://nvd3.org/)
+
+
+## Flot
+
+A jQuery library for data visualization. Used in some other data intensive tools as [Grafana](http://grafana.org/). 
+
+[flotcharts.org](http://www.flotcharts.org/)
