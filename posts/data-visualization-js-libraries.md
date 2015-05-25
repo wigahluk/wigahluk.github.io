@@ -2,12 +2,14 @@ Data Visualization JavaScript Libraries
 =======================================
 
 
-A good part of my job is related to data visualization in a web application. As you probably know, the most recent approach to this problem is to draw the graphical artifacts on the browser, removing some of the extra load from the servers. Because of this I’m used to search for JavaScript libraries specialized in charts and time series.
+A good part of my job is related to data visualization in a web application. As probably you know, the most common approach to this problem is to draw the graphical artifacts on the browser, removing load from the servers and giving much more control of the visualization to the front end developers and to the user, as they can now interact with the data.
 
-Some of these libraries I have used, some of them I want to try, and some of them I just want to know about. Almost all of them have been open tabs in my browser for months, waiting to have some time to explore them. Today I'm closing these tabs but listing them all here.
+This is a short list of JavaScript (or Typescript) libraries that I have found in my safaris across the web, some of them I have used, some others I want to try, and there is also the ones I just want to know about. Almost all of them have been open tabs in my browser for months, waiting for me to have some extra time to experiment with them. Today I'm closing these tabs and listing them all here with some notes for my self that hopefully can be useful to others too.
 
  
 ## Highcharts
+
+![Area chart](/img/highcharts.jpg)
 
 This one is probably one of the most famous ones. It is commercial but has a pretty good amount of features and if your company can afford the license price, it is probably a good option to bring to the table.
 
@@ -20,23 +22,37 @@ They also offer a minimalist version of their charts to be used as a sparklines.
  
 ## Plottable
 
-Visually this one is pretty neat and clean. It offers the basic charts: bars, lines and scatters.
+![Bar chart](/img/plottable.jpg)
+
+A neat and clean library built on top of [D3](http://d3js.org). It offers the basic charts: bars, lines and scatters. Even if not important for their users, it is nice to know that it is written in [Typescript](http://www.typescriptlang.org/).
 
 [plottablejs.org](http://plottablejs.org/)
 
 
 ## Datakit
 
-This one is a bit more than a chart library. It also includes some neat functionality to do some data analysis.
+![Line chart](/img/datakit.jpg)
+
+This one is a much more than a chart library. It also includes some useful features for data analysis as reading data from different sources and statistical methods.
 
 [github.com/NathanEpstein/datakit](https://github.com/NathanEpstein/datakit)
 
 
-## Envision
+## Envision and Flotr2
 
-Mainly focused on time series, offers simple but well presented charts. It also support very customized charting, as their fractal example shows.
+![Area chart with zoom](/img/envisionjs.jpg)
+
+Envision is mainly focused on time series, offers simple but well presented charts. It has a nice mode for zooming in and out and for moving the window of visualization across time series (Highstock offers the same feature).
+
+It also support very customized charting, as their fractal example shows.
 
 [www.humblesoftware.com/envision](http://www.humblesoftware.com/envision)
+
+Envision is built on the top of Flor2, maintained by the same company and offering an extendable platform for creating charts.
+
+[www.humblesoftware.com/flotr2](http://www.humblesoftware.com/flotr2/)
+
+
 
 
 ## JointJS
@@ -81,8 +97,10 @@ There is nothing wrong with [D3](http://d3js.org), actually, it is probably the 
 
 ## Some other folks talking about the same things:
 
-[Jim Vallandingham](http://vallandingham.me/) has a very interesting blog about visualization and data processing.
+Well, it is not just that they also talk about the same things, but that they are experts on the field (which I am not).
 
 [Edward Tufte](http://www.edwardtufte.com/tufte/index) is an essential reference on the data visualization world. If you don’t know him, try to google his name and look around of what people says about him and of course, what he himself have and is saying. In my opinion, his *data ink ratio* and the *sparklines* are two of the most interesting ideas in data visualization. His most known work is [The Visual Display of Quantitative Information](http://www.amazon.com/gp/product/0961392142/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0961392142&linkCode=as2&tag=wigahlukblog-20&linkId=6M4GTOWCQXDBDM4U).
 
-[The Functional Art: An introduction to information graphics and visualization](http://www.amazon.com/gp/product/0321834739/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321834739&linkCode=as2&tag=wigahlukblog-20&linkId=SSXTTBZHZB3JFAWH) is a must read if you are in the data visualization world. Available in [Safari](my.safaribooksonline.com). 
+[The Functional Art: An introduction to information graphics and visualization](http://www.amazon.com/gp/product/0321834739/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321834739&linkCode=as2&tag=wigahlukblog-20&linkId=SSXTTBZHZB3JFAWH) is a must read if you are in the data visualization world. Available in [Safari](my.safaribooksonline.com).
+
+[Jim Vallandingham](http://vallandingham.me/) has a very interesting blog about visualization and data processing.
