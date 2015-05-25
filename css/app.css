@@ -3,6 +3,9 @@ body {
     font-family: 'Merriweather', "Bookman", Georgia, "Times New Roman", serif;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2YyZjJmMiI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
+.clear {
+    clear: both;
+}
 pre {
     background-color: #E8E8E8;
 }
@@ -100,27 +103,45 @@ div.post p img {
 }
 
 /* Book listings */
+div.booksHeader {
+    margin-bottom: 20px;
+}
 div.book-listing {
-    padding: 12px;
     clear: both;
+    position: relative;
+    font-size: 12px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 div.book-listing .cover {
-    float: left;
-    margin-right: 20px;
-    background-color: #B7B7B8;
+     float: left;
+     margin-right: 15px;
+     margin-left: -80px;
+     border: 1px solid #D7D7D7;
+     border-radius: 4px;
+     overflow: hidden;
 }
-div.book-listing h1 {
-    font-family: 'Raleway', Arial, Helvetica, Sans-serif;
+div.book-listing .cover img {
+    margin: -1px;
+}
+div.book-listing h2 {
     margin-top: 0;
     font-weight: 200;
-    font-size: 35px;
+    font-size: 26px;
+    margin: 0;
 }
 div.book-listing .notes {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
 /* SVG Icons */
+.star-rating {
+    display: inline-block;
+}
 .star {
     width: 20px;
     height: 20px;

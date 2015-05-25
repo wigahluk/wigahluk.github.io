@@ -1,8 +1,10 @@
 
 
-<div class="col-md-12">
-    <h1><small>
-        <em>
-            Once I've read these books I had the feeling that almost everybody should read them or at least have a look at them.</em></small></h1>
+<div class="row">
+
+    <div class="col-md-12 booksHeader">
+            <em>
+                Once I've read these books I had the feeling that almost everybody should read them or at least have a look at them.</em>
+    </div>
+    <book-listing ng-repeat="book in books" book="book"></book-listing>
 </div>
-<book-listing ng-repeat="book in books" book="book"></book-listing>

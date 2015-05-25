@@ -12,12 +12,15 @@
                     book: '='
                 },
                 link: function (scope, element, attrs) {
-                    var fileUri = "book-listings/" + scope.book.notes + ".md";
-                    posts.file(fileUri).then(function (bookNotes) {
-                        scope.content = bookNotes.content();
-                    }, function (error) {
-                        console.log('error', error);
-                    });
+                    if(scope.book.notes){
+                        var fileUri = "book-listings/" + scope.book.notes + ".md";
+                        posts.file(fileUri).then(function (bookNotes) {
+                            scope.content = bookNotes.content();
+                        }, function (error) {
+                            console.log('error', error);
+                        });
+                    }
+
                     scope.link = scope.book.amazonLink || scope.book.gitHubLink || scope.book.link;
                     scope.hasCover = (scope.book.cover && scope.book.cover.length > 1);
                     scope.hasAmazon = (scope.book.amazonLink && scope.book.amazonLink.length > 1);
