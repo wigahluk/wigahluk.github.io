@@ -120,3 +120,5 @@ Well, it is not just that they also talk about the same things, but that they ar
 [The Functional Art: An introduction to information graphics and visualization](http://www.amazon.com/gp/product/0321834739/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321834739&linkCode=as2&tag=wigahlukblog-20&linkId=SSXTTBZHZB3JFAWH) is a must read if you are in the data visualization world. Available in [Safari](my.safaribooksonline.com).
 
 [Jim Vallandingham](http://vallandingham.me/) has a very interesting blog about visualization and data processing.
+
+[The Why Axis](http://thewhyaxis.info/) is a blog from [Bryan Connor](http://www.bryanconnor.com/) dedicated to data visualization.
