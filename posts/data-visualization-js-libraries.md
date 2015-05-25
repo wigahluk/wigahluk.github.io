@@ -2,7 +2,7 @@ Data Visualization JavaScript Libraries
 =======================================
 
 
-A good part of my job is related to data visualization in a web application. As probably you know, the most common approach to this problem is to draw the graphical artifacts on the browser, removing load from the servers and giving much more control of the visualization to the front end developers and to the user, as they can now interact with the data.
+A good part of my job is related to data visualization in a web application. As probably you know, the most common approach to this problem is to draw the graphical artifacts on the browser, removing load from the servers and giving much more control of the visualization to the front end developers and to the user, as they can now interact with the data. Drawing charts on the browser can be done in only one way, using JavaScript (of course you can use Flash or try Silverlight, but allow me to ignore them during this article), and because doing it all from scratch is not advisable, you will end up using a JavaScript library.
 
 This is a short list of JavaScript (or Typescript) libraries that I have found in my safaris across the web, some of them I have used, some others I want to try, and there is also the ones I just want to know about. Almost all of them have been open tabs in my browser for months, waiting for me to have some extra time to experiment with them. Today I'm closing these tabs and listing them all here with some notes for my self that hopefully can be useful to others too.
 
