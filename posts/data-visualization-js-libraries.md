@@ -2,9 +2,9 @@ Data Visualization JavaScript Libraries
 =======================================
 
 
-A good part of my job is related to data visualization in a web application. As you probably know, the most recent approach to this problem is to draw the graphical artifacts on the browser, removing some of the extra load from the servers. Because of this, I use to search for JavaScript libraries specialized in charts and time series.
+A good part of my job is related to data visualization in a web application. As you probably know, the most recent approach to this problem is to draw the graphical artifacts on the browser, removing some of the extra load from the servers. Because of this I’m used to search for JavaScript libraries specialized in charts and time series.
 
-Some of these libraries I have used, some of them I want to try, and some of them I just want to know about. Almost all of them have been as open tabs in my browser for months, waiting to have some time to explore them. Today I'm closing these tabs but listing them all here.
+Some of these libraries I have used, some of them I want to try, and some of them I just want to know about. Almost all of them have been open tabs in my browser for months, waiting to have some time to explore them. Today I'm closing these tabs but listing them all here.
 
  
 ## Highcharts
@@ -83,6 +83,6 @@ There is nothing wrong with [D3](http://d3js.org), actually, it is probably the 
 
 [Jim Vallandingham](http://vallandingham.me/) has a very interesting blog about visualization and data processing.
 
-[Edward Tufte](http://www.edwardtufte.com/tufte/index) is an essential reference on the data visualization world. If you don’t know him, try to google his name and look around of what people says about him and of course, what he himself have and is saying. In my opinion, his *data ink ratio* and the *sparklines* are two of the most interesting ideas in data visualization. 
+[Edward Tufte](http://www.edwardtufte.com/tufte/index) is an essential reference on the data visualization world. If you don’t know him, try to google his name and look around of what people says about him and of course, what he himself have and is saying. In my opinion, his *data ink ratio* and the *sparklines* are two of the most interesting ideas in data visualization. His most known work is [The Visual Display of Quantitative Information](http://www.amazon.com/gp/product/0961392142/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0961392142&linkCode=as2&tag=wigahlukblog-20&linkId=6M4GTOWCQXDBDM4U).
 
 [The Functional Art: An introduction to information graphics and visualization](http://www.amazon.com/gp/product/0321834739/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321834739&linkCode=as2&tag=wigahlukblog-20&linkId=SSXTTBZHZB3JFAWH) is a must read if you are in the data visualization world. Available in [Safari](my.safaribooksonline.com). 
