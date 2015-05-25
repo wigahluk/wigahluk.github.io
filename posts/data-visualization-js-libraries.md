@@ -74,7 +74,7 @@ Created as a jQuery library to support data visualization. Used in some other da
 
 [flotcharts.org](http://www.flotcharts.org/)
 
-## Why no D3
+## Why not D3
 
 There is nothing wrong with [D3](http://d3js.org), actually, it is probably the most complete set of tools for creating visualizations with JavaScript. But it in my personal opinion, it is not a domain specific solution. You can create a domain specific solution on the top of it, and many libraries are doing that, but using D3 without any other library can become a bit of a hard task. When you are visualizing data, you don’t want to invest tons of hours creating charts, you want to work with your data and analyzing your visualizations, and that is why I believe that using a chart specific tool is a better idea than playing directly with D3 or [Rafael](http://raphaeljs.com/). On the other hand, if you are doing your own visualization library, or you want a super customized visualization, the looking into these generic tools is a must.
 
