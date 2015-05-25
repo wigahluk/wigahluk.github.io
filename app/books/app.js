@@ -46,7 +46,7 @@
                 {
                     title: 'Domain-Driven Design: Tackling Complexity in the Heart of Software',
                     cover: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321125215&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=wigahlukblog-20',
-                    amazonLink: 'ttp://www.amazon.com/gp/product/0321125215/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321125215&linkCode=as2&tag=wigahlukblog-20&linkId=7TEA2SJM62FPUANJ',
+                    amazonLink: 'http://www.amazon.com/gp/product/0321125215/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321125215&linkCode=as2&tag=wigahlukblog-20&linkId=7TEA2SJM62FPUANJ',
                     author: 'Eric Evans',
                     stars: 5
                 }
