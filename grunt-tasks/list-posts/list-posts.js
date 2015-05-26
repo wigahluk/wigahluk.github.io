@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         for (var i = 0; i< files.length; i++ ) {
             var fpath = path + '/' + files[i];
             var stats = fs.statSync(fpath);
-            if(stats.isFile()) {
+            if(stats.isFile() && files[i] !== '.DS_Store') {
                 index[files[i]] = {
                     name: files[i],
                     date: stats.ctime
