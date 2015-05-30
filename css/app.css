@@ -9,10 +9,119 @@ body {
 pre {
     background-color: #E8E8E8;
 }
-
-.container-fluid {
-    max-width: 1200px;
+@media screen and (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1200px;
+    }
+    div.post {
+        width: 1000px;
+    }
+    div.post .timestamp {
+        top: 20px;
+        left: -20px;
+    }
+    div.post .article {
+        margin: 30px;
+        padding: 0px 20px 20px 20px;
+    }
+    div.post p img {
+        margin-right: -50px;
+        border: 1px solid #DFDFDF;
+        display: block;
+        float: right;
+        margin-left: 8px;
+    }
+    div.post h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    div.book-listing {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.book-listing h2 {
+        font-size: 26px;
+    }
+    div.book-listing .cover {
+        margin-left: -80px;
+    }
 }
+@media screen and (min-width: 700px) and (max-width: 1199px){
+    .container-fluid {
+    }
+    div.post {
+    }
+    div.post .timestamp {
+        top: -11px;
+        left: 32px;
+    }
+    div.post .article {
+        margin: 10px;
+        padding: 0px 20px 20px 20px;
+    }
+    div.post p img {
+        margin-right: -32px;
+        border: 1px solid #DFDFDF;
+        display: block;
+        float: right;
+        margin-left: 8px;
+    }
+    div.post h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    div.post h2 {
+        font-size: 28px;
+    }
+    div.book-listing {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    div.book-listing h2 {
+        font-size: 22px;
+    }
+    div.book-listing .cover {
+
+    }
+}
+@media screen and (max-width: 699px){
+    .container-fluid {
+    }
+    div.post {
+    }
+    div.post .timestamp {
+        display: none;
+    }
+    div.post .article {
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+    }
+    div.post p img {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        max-width: 100%;
+    }
+    div.post h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    div.post h2 {
+        font-size: 28px;
+    }
+    div.book-listing {
+
+    }
+    div.book-listing h2 {
+        font-size: 22px;
+    }
+    div.book-listing .cover {
+        display: none;
+    }
+}
+
 .witt-menu {
     border-bottom: 1px solid #D1D8DD;
 }
@@ -51,13 +160,10 @@ pre {
 div.post {
     position: relative;
     font-size: 16px;
-    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 div.post .article {
-    margin: 30px;
-    padding: 0px 20px 20px 20px;
 }
 
 div.post a {
@@ -74,9 +180,7 @@ div.post a:hover h1 {
 }
 div.post h1 {
     font-weight: 200;
-    font-size: 40px;
     padding-top: 10px;
-    margin-bottom: 25px;
     padding-bottom: 18px;
     border-bottom: 1px solid #E2E2E2;
     clear: both;
@@ -87,19 +191,12 @@ div.post h2 {
 
 div.post .timestamp {
     position: absolute;
-    top: 20px;
-    left: -20px;
     font-family: 'Raleway', Arial, Helvetica, Sans-serif;
     font-size: 13px;
     color: #D7DBDD;
 }
 
 div.post p img {
-    border: 1px solid #DFDFDF;
-    display: block;
-    float: right;
-    margin-right: -50px;
-    margin-left: 8px;
 }
 
 /* Book listings */
@@ -110,16 +207,12 @@ div.book-listing {
     clear: both;
     position: relative;
     font-size: 12px;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 div.book-listing .cover {
      float: left;
      margin-right: 15px;
-     margin-left: -80px;
      border: 1px solid #D7D7D7;
      border-radius: 4px;
      overflow: hidden;
@@ -128,9 +221,7 @@ div.book-listing .cover img {
     margin: -1px;
 }
 div.book-listing h2 {
-    margin-top: 0;
     font-weight: 200;
-    font-size: 26px;
     margin: 0;
 }
 div.book-listing .notes {
