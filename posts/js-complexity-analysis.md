@@ -17,7 +17,7 @@ The fist step, of course, is install the task tool:
 
 Then you need to update your `Gruntfile.js`:
 
-   plato: {
+    plato: {
             my_page: {
                 files: { 'plato-report': ['src/**/*.js'] }
             }
@@ -25,4 +25,4 @@ Then you need to update your `Gruntfile.js`:
 
 And that’s pretty much all, at least with the default configuration.
 
-The generated report looks like [this one](/plato-report/index.html) (this is the actual report for my page, this page): 
+The generated report looks like [this one](/plato-report/index.html) (this is the actual report for my page, this page). 
