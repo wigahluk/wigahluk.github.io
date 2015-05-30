@@ -24,7 +24,7 @@
 
                 .when('/post/:post', {
                     controller:'controller/post',
-                    templateUrl:'app/controllers/views/post.html'
+                    templateUrl:'src/views/post.html'
                 })
                 .otherwise({
                     redirectTo:'/'

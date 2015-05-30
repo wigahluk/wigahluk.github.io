@@ -7,7 +7,7 @@
             return {
                 restrict: 'E',
                 replace: 'true',
-                templateUrl: 'app/directives/navbar.html',
+                templateUrl: 'src/views/directives/navbar.html',
                 scope: {
                     navtabs: '='
                 },
