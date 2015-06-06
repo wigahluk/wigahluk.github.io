@@ -36,7 +36,22 @@ I added an extra parameter called `onLoad` that expects a function like:
  
     function myHandler (data, xhr) {}
     
-where `data` is the content of the file and `xhr` is the _xhr_ object from the _jQuery_ Ajax call.
+Where `data` is the content of the file and `xhr` is the _xhr_ object from the _jQuery_ Ajax call.
 
-As an extra feature, I changed a bit the styling of the site. It still needs some refactoring though, but now it doesn't 
-looks as old fashion as before :)
+As an extra feature, I changed a bit the styling of the site. It still needs some refactoring though, but now it doesn't looks as old fashion as before :)
+
+## Update:
+
+After some issues with Showdown as my rendering engine for markdown I decided to look for some other tools. This is what I found:
+
+### [Showdown](https://github.com/showdownjs/showdown)
+
+This was my original engine, and it is actually pretty nice to use for some basic needs, but it does the rendering applying a chain of global replacements using regular expressions that use the full text every time. If you are interested in adding some extensions, this can cause an issue on performance, besides the fact that if you are not careful, you can modify the output of another transformation.
+
+### [markdown-js](https://github.com/evilstreak/markdown-js)
+
+This is probably the fastest markdown tool you will find for JavaScript, but because it is so optimized, it doesn’t allow extensions and customization seems to need a complete fork of the code.
+
+### [Markdown-it](https://github.com/markdown-it/markdown-it)
+
+This one is my new choice. It is not as fast as markdown-js but it does a pretty decent job. It is also easy to extend and has a good amount of options to customize the rendering. The same as markdown-js, it doesn’t apply brute force on the replacements, instead, it creates a tree of tokens that is the passed to a render. 

@@ -7,7 +7,7 @@
             return {
                 restrict: 'E',
                 replace: 'true',
-                templateUrl: 'app/directives/views/post.html',
+                templateUrl: 'src/views/directives/post.html',
                 scope: {
                     file: '@', // Used for MD or HTML files
                     url: '@',

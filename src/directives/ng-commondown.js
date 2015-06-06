@@ -1,11 +1,11 @@
 ;(function (angular) {
     'use strict';
 
-    angular.module('wPage').directive('ngShowdown', [
+    angular.module('wPage').directive('ngCommondown', [
         '$sanitize',
         '$http',
         function ($sanitize, $http) {
-            var showdown = new Showdown.converter();
+            var markdown = window.markdownit();
 
             return {
                 restrict: 'E',
@@ -22,7 +22,6 @@
 
                     var innerNode = element.find('.ng-scope');
                     if (innerNode.length > 0) {
-                        console.log(innerNode);
                         applyContent(innerNode.html());
                     }
 
@@ -54,7 +53,7 @@
                             element.html('');
                             return;
                         }
-                        var html = $sanitize(showdown.makeHtml(content));
+                        var html = $sanitize(markdown.render(content));
                         element.html(html);
                         var headers = element.find('h1');
                         if (scope.href && headers && headers.length > 0) {

@@ -9,7 +9,7 @@
                 var articles = _.map(data, function (entry) {
                     return { name: entry.name, date: new Date(entry.date) };
                 });
-                $scope.articles = _.sortBy(articles, function (a) { return - a.date.valueOf()});
+                $scope.articles = _.sortBy(articles, function (a) { return -a.date.valueOf(); });
             });
         }
     ]);

@@ -9,8 +9,8 @@
     </small></h2>
     <div>By {{book.author}}</div>
     <div class="notes">
-        <ng-showdown content="content">
-        </ng-showdown>
+        <ng-commondown content="content">
+        </ng-commondown>
     </div>
     <div ng-show="hasAmazon"><a href="{{book.amazonLink}}">Buy <em>{{book.title}}</em> at Amazon</a></div>
     <div ng-show="hasGitHub"><a href="{{book.gitHubLink}}">Open <em>{{book.title}}</em> on GitHub</a></div>
