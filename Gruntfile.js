@@ -77,6 +77,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-plato');
 
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify:my_dist', 'usemin', 'list-posts', 'plato']);
+    grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify:my_dist', 'usemin', 'list-posts']);
+    grunt.registerTask('complex', ['plato']);
 
 };

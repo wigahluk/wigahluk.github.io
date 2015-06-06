@@ -9,7 +9,7 @@ This is a short list of JavaScript (or Typescript) libraries that I have found i
  
 ## Highcharts
 
-![Area chart](/img/highcharts.jpg)
+![Area Chart](/img/highcharts.jpg)
 
 This one is probably one of the most famous ones. It is commercial but has a pretty good amount of features and if your company can afford the license price, it is probably a good option to bring to the table.
 
@@ -22,7 +22,7 @@ They also offer a minimalist version of their charts to be used as a sparklines.
  
 ## Plottable
 
-![Bar chart](/img/plottable.jpg)
+![Bar Chart](/img/plottable.jpg)
 
 A neat and clean library built on top of [D3](http://d3js.org). It offers the basic charts: bars, lines and scatters. Even if not important for their users, it is nice to know that it is written in [Typescript](http://www.typescriptlang.org/).
 
@@ -31,7 +31,7 @@ A neat and clean library built on top of [D3](http://d3js.org). It offers the ba
 
 ## Datakit
 
-![Line chart](/img/datakit.jpg)
+![Line Chart](/img/datakit.jpg)
 
 This one is a much more than a chart library. It also includes some useful features for data analysis as reading data from different sources and statistical methods.
 
@@ -40,7 +40,7 @@ This one is a much more than a chart library. It also includes some useful featu
 
 ## Envision and Flotr2
 
-![Area chart with zoom](/img/envisionjs.jpg)
+![Area Chart with Zoom](/img/envisionjs.jpg)
 
 Envision is mainly focused on time series, offers simple but well presented charts. It has a nice mode for zooming in and out and for moving the window of visualization across time series (Highstock offers the same feature).
 
@@ -57,7 +57,7 @@ Envision is built on the top of Flor2, maintained by the same company and offeri
 
 ## JointJS
 
-![Line chart](/img/jointjs.jpg)
+![Line Chart](/img/jointjs.jpg)
 
 It covers a very good amount of different needs, from UML to Petri nets, including chess diagrams and organizational charts. It is part of a biggest software that provides a diagramming editor online. The editor has a commercial license, but the library is open source and you can use it for free.
 
@@ -66,7 +66,7 @@ It covers a very good amount of different needs, from UML to Petri nets, includi
 
 ## dimple
 
-![Line chart](/img/dimplejs.jpg)
+![Line Chart](/img/dimplejs.jpg)
 
 Works on top of [D3](http://d3js.org) and claims to provide an easy API for creating charts hiding the complexity of D3.
 The charts styles on this library are one of the cleanest you can get, a ver well implemented graphic design for data visualization.
@@ -76,7 +76,7 @@ The charts styles on this library are one of the cleanest you can get, a ver wel
 
 ## MetricsGraphics
 
-![Area chart](/img/metricsgraphics.jpg)
+![Area Chart](/img/metricsgraphics.jpg)
 
 Another library on the top of [D3](http://d3js.org) that also offers neat charts with a minimalistic design. I’m not sure I like how it handles the axis, but if you are a fan of Tufte, probably you’ll like it.
 
@@ -85,7 +85,7 @@ Another library on the top of [D3](http://d3js.org) that also offers neat charts
 
 ## nvd3
 
-![Area chart](/img/nvd3.jpg)
+![Area Chart](/img/nvd3.jpg)
 
 This one is also built on top of [D3](http://d3js.org). It offers a nice amount of different charts. The generated chart can be sometimes messy, but something you can live with.
 
@@ -94,11 +94,26 @@ This one is also built on top of [D3](http://d3js.org). It offers a nice amount 
 
 ## Flot
 
-![Combined chart](/img/flot.jpg)
+![Combined Chart](/img/flot.jpg)
 
 Created as a jQuery library to support data visualization. Used in some other data intensive tools as [Grafana](http://grafana.org/). 
 
 [flotcharts.org](http://www.flotcharts.org/)
+
+## C3
+
+Another tool based on the top of [D3](http://d3js.org). I has a quite friendly API and a nice presentation; mainly useful if you are adding or removing data dynamically from your charts. Not a huge amount of flexibility on the presentation, but if you are more focused on dynamic loading/unloading and don’t want to do a lot of coding, this tool is quite efficient.
+
+[C3.js](http://c3js.org/)
+
+## Project EON
+
+This tool is build on the top of [C3](http://c3js.org/), and can be seen also as part of the [D3](http://d3js.org) family. It offers a nice API (inherited from the also simple API from C3) for handling dynamic data for real time presentations.
+
+_Unrelated note: Its web site is a bit overloaded and it is not recomendable to leave it there as an open tab for centuries unless you want to find it dead as it happened to me._
+
+[Project EON](http://www.pubnub.com/developers/eon/)
+
 
 ## Why not D3
 
