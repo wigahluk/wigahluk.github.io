@@ -104,7 +104,7 @@ Created as a jQuery library to support data visualization. Used in some other da
 
 Another tool based on the top of [D3](http://d3js.org). I has a quite friendly API and a nice presentation; mainly useful if you are adding or removing data dynamically from your charts. Not a huge amount of flexibility on the presentation, but if you are more focused on dynamic loading/unloading and don’t want to do a lot of coding, this tool is quite efficient.
 
-[C3.js](http://c3js.org/)
+[c3js.org](http://c3js.org/)
 
 ## Project EON
 
@@ -112,7 +112,7 @@ This tool is build on the top of [C3](http://c3js.org/), and can be seen also as
 
 _Unrelated note: Its web site is a bit overloaded and it is not recomendable to leave it there as an open tab for centuries unless you want to find it dead as it happened to me._
 
-[Project EON](http://www.pubnub.com/developers/eon/)
+[pubnub.com/developers/eon](http://www.pubnub.com/developers/eon/)
 
 
 ## Why not D3

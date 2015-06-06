@@ -12,10 +12,16 @@ It was based originally in [Underscore](http://underscorejs.org/), a very known 
 
 In case you are interested in a more serious comparison between both, you can read [Underscore vs Lo-Dash](http://benmccormick.org/2014/11/12/underscore-vs-lodash/)
 
-[lodash](https://lodash.com/)
+[lodash.com](https://lodash.com/)
 
 ## Sylvester
 
 This one is a linear algebra library dedicated to Vector and Matrix manipulation.
 
-[sylvester](http://sylvester.jcoglan.com/)
+[sylvester.jcoglan.com](http://sylvester.jcoglan.com/)
+
+## jStat
+
+Another linear algebra library with a good amount of statistical analysis methods.
+
+[jstat.github.io](http://jstat.github.io/)
