@@ -13,7 +13,8 @@ module.exports = function (grunt) {
             if(stats.isFile() && files[i] !== '.DS_Store') {
                 index[files[i]] = {
                     name: files[i],
-                    date: stats.birthtime
+                    date: stats.birthtime,
+                    mdate: stars.mtime
                 };
             }
         }
