@@ -8,9 +8,6 @@ var mainPath = path.resolve(__dirname, 'app', 'main.jsx');
 var postListPlugin = require(path.resolve(__dirname, 'webpack', 'postListPlugin.js'));
 
 var config = {
-    // Makes sure errors in console map to the correct file
-    // and line number
-    devtool: 'inline-source-map',
     entry: [
         mainPath
     ],
@@ -58,8 +55,6 @@ var config = {
         ]
     },
 
-    // We have to manually add the Hot Replacement plugin when running
-    // from Node
     plugins: [
         new postListPlugin(),
         new webpack.ProvidePlugin({
