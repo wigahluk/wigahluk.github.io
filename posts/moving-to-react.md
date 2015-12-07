@@ -10,15 +10,15 @@ React combined with Reactive Extensions seems a more natural environment for fun
 Other reasons are:
 
 * I want to use Webpack and its hot loading, IE6 and TypeScript support, as well as its packaging capabilities.
-* Configuring Webpack with Angular 1.x is a bit tricky and full of magic. I have a very bad memory and always forget what is happening behind all this magic tools with magic words as "ng-inject" in the middle of the file. This makes me a bit unconfortable with Angular/Webpack.
+* Configuring Webpack with Angular 1.x is a bit tricky and full of magic. I have a very bad memory and always forget what is happening behind all this magic tools with magic words as "ng-inject" in the middle of the file. This makes me a bit uncomfortable with Angular/Webpack.
 * Configuring React with Webpack seems to be a lot more natural. No need for extra tricks. Tests  with Webpack/React seem to be also easier to configure.
 * I'm starting some experiments with SVG manipulation and Angular directives cause a lot of console errors when rendering SVGs, something related to the template being loaded before being processed. I don't see that kind of errors in React (probably I'll see others, but till now, all looks good).
 
 ## What are the steps to do it?
 
-* Configure Webpack and webpack server. If possible, I want to avoid creating a full Node.js/Express min app, but I'm thinking it can be needed
+* Configure Webpack and Webpack server. If possible, I want to avoid creating a full Node.js/Express min app, but I'm thinking it can be needed
 * Recreate all my old directives as React components
-* Rectreate the logic to load the list of posts and covert it into a Webpack loader
+* Recreate the logic to load the list of posts and covert it into a Webpack loader
 
 I'm thinking that some extra features I can add to this blog can be done as Webpack loaders or npm scripts. Among the things I want to add:
 
@@ -30,7 +30,7 @@ Some other nice to have features:
 
 * Sequence diagrams in markdown correctly rendered
 
-### Configure Webpack and webpack server
+### Configure Webpack and Webpack server
 
 As I was thinking, at the end I needed to use a node/express app as my develop entry point.
 
@@ -150,7 +150,7 @@ Webpack is running and my app is pretty much broken. I see only a blank page. No
 
 In my old *post* directive, I was supporting HTML posts, which I don't really use and can be an issue. I'm not supporting them any more.
 
-Intsead of using the jQuery like API to insert the content of my posts after rendering the HTML from the MD files, I'm using the method `dangerouslySetInnerHTML` from React, that makes me think that I should find a clenaer why to solve this need.
+Instead of using the jQuery like API to insert the content of my posts after rendering the HTML from the MD files, I'm using the method `dangerouslySetInnerHTML` from React, that makes me think that I should find a cleaner why to solve this need.
 
 	// Angular
 	// Somehow you get access to the element object.
@@ -170,4 +170,4 @@ This was pretty easy to use in combination with RxJS:
 	.fromPromise(fetch('build/filelist.json'))
 	.flatMap( p => p.json());
 
-I moved some of the logic to a Webopack plugin, now I'm generating the list of files and extracting the title in this step, instead of doing extra processing in the browser that was also not the cleanest solution.
+I moved some of the logic to a Webpack plugin, now I'm generating the list of files and extracting the title in this step, instead of doing extra processing in the browser that was also not the cleanest solution.
