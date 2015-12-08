@@ -15,11 +15,10 @@ class About extends React.Component {
 
         let postFetch = Rx.Observable
             .fromPromise(fetch('/README.md'))
-            .flatMap( p => p.text());
-        let subscription = postFetch.subscribe(
+            .flatMap( p => p.text())
+            .subscribe(
             x => this.setState({ about: x }),
-            e => console.log('onError: %s', e),
-            () => console.log('Articles loaded.')
+            e => console.log('onError: %s', e)
         );
     }
     render() {

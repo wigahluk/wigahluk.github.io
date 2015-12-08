@@ -1,3 +1,4 @@
+/* global __dirname */
 /* global process */
 // This file is our entry point for Node.js
 var express = require('express');
