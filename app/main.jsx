@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link } from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory'
+import { Router, Route, Link, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history'
 
 import App from './app.jsx';
 import Books from './books.jsx';
@@ -15,9 +15,7 @@ import './main.styl';
 
 // lets remove the ?_k=ckuvup junk in the URL.
 // ref: https://github.com/rackt/react-router/blob/master/docs/guides/basics/Histories.md#createhashhistory
-let history = createHashHistory({
-    queryKey: false
-});
+const history = useRouterHistory(createHashHistory)({ queryKey: false });
 
 const routes = (<Router history={history}>
     <Route path="/" component={App}>
