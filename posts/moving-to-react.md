@@ -9,7 +9,7 @@ React combined with Reactive Extensions seems a more natural environment for fun
 
 Other reasons are:
 
-* I want to use Webpack and its hot loading, IE6 and TypeScript support, as well as its packaging capabilities.
+* I want to use Webpack and its hot loading, ES6 and TypeScript support, as well as its packaging capabilities.
 * Configuring Webpack with Angular 1.x is a bit tricky and full of magic. I have a very bad memory and always forget what is happening behind all this magic tools with magic words as "ng-inject" in the middle of the file. This makes me a bit uncomfortable with Angular/Webpack.
 * Configuring React with Webpack seems to be a lot more natural. No need for extra tricks. Tests  with Webpack/React seem to be also easier to configure.
 * I'm starting some experiments with SVG manipulation and Angular directives cause a lot of console errors when rendering SVGs, something related to the template being loaded before being processed. I don't see that kind of errors in React (probably I'll see others, but till now, all looks good).
