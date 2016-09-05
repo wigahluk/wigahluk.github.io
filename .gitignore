@@ -1,6 +1,7 @@
 # Node Modules #
 ################
 /node_modules
+/typings
 
 # Idea files #
 ##############

@@ -5,4 +5,19 @@ I'm a software developer. When I’m not at work, I’m doing a bit of everythin
 
 Part of that everything is my most recent attempt to keep a blog, this time as a GitHub page at [wigahluk.github.io](https://wigahluk.github.io). 
 
-Just as an exercise I have configured [plato](https://github.com/es-analysis/plato) to create a [report](/plato-report/index.html) for this blog that happens to be an AngularJS application and can be analyzed for complexity in its code. 
+## Content
+
+* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/09/03)
+* [Towards the End of Gender Discussion](posts/towards-the-end-of-gender-discussion.md) (2016/06/17)
+* [Moving to React and Webpack](posts/moving-to-react.md) (2016/03/06)
+* [three dots different recipes](posts/three-dots-different-recipes.md) (2015/11/28)
+* [Math JavaScript Libraries](posts/math-js-libraries.md) (2015/06/06)
+* [JavaScript Complexity Analysis](posts/js-complexity-analysis.md) (2015/05/29)
+* [Data Visualization JavaScript Libraries](posts/data-visualization-js-libraries.md) (2015/05/22)
+* [Autogenerate the Index of Posts](posts/autogenerate-the-index-of-posts.md) (2015/05/17)
+* [Creating my own Showdown directive](posts/creating-my-own-showdown-directive.md) (2015/05/14)
+* [Adding support for reading a single file](posts/adding-support-for-reading-a-single-file.md) (2015/05/07)
+* [Implicit read and write objects for JSON in Play 2.3](posts/implicit-read-write-objects-play-2.3.md) (2014/12/21)
+* [Setting up this thing](posts/setting-up-this-thing.md) (2014/12/21)
+* [Adding Google Analytics](posts/adding-google-ax.md) (2014/12/13)
+ 
