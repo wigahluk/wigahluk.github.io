@@ -1,36 +1,38 @@
 /* global __dirname */
 /* global process */
 // This file is our entry point for Node.js
-var express = require('express');
-var path = require('path');
-var httpProxy = require('http-proxy');
+const express = require('express');
+const path = require('path');
+const basePath = process.cwd();
+const httpProxy = require('http-proxy');
 
-var proxy = httpProxy.createProxyServer();
-var app = express();
+const proxy = httpProxy.createProxyServer();
+const app = express();
+const webpackSever = require('./webpack.server');
 
-var port =  3000;
+const port =  3000;
 
 // We point our static assets to a dummy folder, so that when requesting for /build/* node doesn't use the built
 // files in the real folder.
-var publicPath = path.resolve(__dirname, 'tmp');
+var publicPath = path.resolve(basePath, 'tmp');
 app.use('/', express.static(publicPath));
 
 // Use a special folder for images in posts:
-app.use('/img/', express.static(path.resolve(__dirname, 'img')));
+app.use('/img/', express.static(path.resolve(basePath, 'img')));
 
 // As we are using a dummy folder as our root, we need to set the path for index.html and other files explicitly.
 // This is a bit of an issue, but I'm not expecting to add many static files anyway.
 app.get('/', function(request, response){
-    response.sendFile(path.resolve(__dirname, 'index.html'));
+    response.sendFile(path.resolve(basePath, 'index.html'));
 });
 app.get('/ico32.png', function(request, response){
-    response.sendFile(path.resolve(__dirname, 'ico32.png'));
+    response.sendFile(path.resolve(basePath, 'ico32.png'));
 });
 app.get('/README.md', function(request, response){
-    response.sendFile(path.resolve(__dirname, 'README.md'));
+    response.sendFile(path.resolve(basePath, 'README.md'));
 });
 
-require('./webpack.server.js')();
+webpackSever();
 
 // Any requests to localhost:3000/build is proxied
 // to webpack-dev-server

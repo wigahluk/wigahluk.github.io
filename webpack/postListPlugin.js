@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var Rx = require('rx');
+var Rx = require('rxjs');
 var _ = require('lodash');
 
 function PostListPlugin(options) {
@@ -16,11 +16,11 @@ PostListPlugin.prototype.apply = function(compiler) {
             path: 'posts'
         };
 
-        var readDir = Rx.Observable.fromNodeCallback(fs.readdir);
+        var readDir = Rx.Observable.bindNodeCallback(fs.readdir);
         readDir(context.path)
             //.flatMap(function(array) { return Rx.Observable.fromArray([].concat(array)); })
             .map(function (array) { return [].concat(array); })
-            .forEach(function (files) {
+            .subscribe(function (files) {
                     //console.log(files);
                     for (var i = 0; i< files.length; i++ ) {
                         // Process each file.

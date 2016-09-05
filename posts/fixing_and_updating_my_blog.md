@@ -3,14 +3,20 @@ Fixing and Updating My Blog
 
 After some time I came back to this blog and when I wanted to push a new post, well, the thing doesn’t work.
 
-I’m still figuring out what the problem is, but I wanted to write a new entry about that and about the painful path that new and modern _frontend_ development have become.
-
-On the old days, starting a web page was just about starting an HTML, putting some JS and CSS and that was all. Now we have all this super features, super flexibility and what not, but as a payment, we now have to download half of the internet in _Node_ dependencies, configure _Webpack_ and do a bunch of things completely unrelated to the app we are writing. I don’t know about you, but I really hate all that.
-
-So, the first problem: I upgraded my version of node some time ago. Now I have version 6.5, who knows what version I had when this used to work.
+So, the first problem: I upgraded my version of _node_ some time ago. Now I have version 6.5, who knows what version I had when this used to work about 6 months ago (is it not frustrating how fast your code becomes obsolete in _Frontend_ development?).
 
 My first attempt is trying to make the full thing work again without changing too much my code.
 
-OK, so far, so good, I just needed to update my _css-loader_ and my _stylus-loader_ for Webpack. I still have a bunch of old dependencies that I want to update. But now all works again and I can start adding posts.
+OK, so far, so good, I just needed to update my _css-loader_ and my _stylus-loader_ for _Webpack_. I still have a bunch of old dependencies that I want to update. But now all works again and I can start adding posts again.
 
-Now, lets start with some more fun. The first ting, add TypeScript support and remove Babel for good. (I really like Babel, but I prefer to use TypeScript compiler directly).
+The next step is to move and organize a bit all the _Webpack_ scripts. They are all around in the root directory. I’m moving all of them to a dedicated folder.
+
+Now we need to upgrade _Webpack_ and its loaders. Just to avoid any other broken functionality due to old versions.
+
+Now, lets start with some more fun. The first thing, add _TypeScript_ support and remove _Babel_ for good. (I really like _Babel_, but I prefer to use _TypeScript_ compiler directly)
+
+Unfortunately, seems that using _TypeScript_ is no that easy, I got into the problem of updating almost all my dependencies, finding typing definitions for a bunch of things and of course now I have another problem, I also need to upgrade my components to use the new React way.
+
+OK, seems that all is working again. `npm outdated` is not giving me any warnings. At least for the next minute, I’m up to date!
+
+After dealing with all these small issues I’m more and more tempted to start using a different approach like _ELM_ or _PureScript_. I’m just sort of tired of the JavaScript ecosystem.

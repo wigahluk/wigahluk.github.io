@@ -1,17 +1,18 @@
 'use strict';
 
-import React from 'react';
-import Rx from 'rx';
+import * as React from 'react';
+import {Observable} from 'rxjs';
 
-import Post from './Post.jsx';
+import PostView from './postView';
+import {Post} from '../models/post';
 
 import './posts.styl'
 
-class Loading extends React.Component {
-    render () { return <div>Loading...</div>; }
-}
+const Loading = () => (<div>Loading...</div>);
 
-class SinglePost extends React.Component {
+interface SinglePostState { post: Post}
+
+class SinglePost extends React.Component<{}, SinglePostState> {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,10 +20,10 @@ class SinglePost extends React.Component {
         };
         let postName = props.params.postName;
 
-        Rx.Observable
+        Observable
             .fromPromise(fetch('build/filelist.json'))
             .flatMap( p => p.json())
-            .flatMap(array => Rx.Observable.fromArray([].concat(array)))
+            .flatMap(array => Observable.from([].concat(array)))
             .filter(e => e.name === postName)
             .subscribe(
             x => this.setState({post: x}),
@@ -31,11 +32,10 @@ class SinglePost extends React.Component {
     }
 
     render() {
-        let post = this.state.post;
-        if (!post) {
-            return <Loading></Loading>;
+        if (!this.state.post) {
+            return <Loading />;
         } else {
-            return <Post post={post}></Post>
+            return <PostView post={this.state.post} />
         }
     }
 }

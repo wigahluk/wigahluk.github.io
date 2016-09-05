@@ -1,19 +1,21 @@
 'use strict';
 
-import React from 'react';
-import Rx from 'rx';
-import MD from 'markdown-it';
+import * as React from 'react';
+import {Observable} from 'rxjs';
+import * as MarkdownIt from 'markdown-it';
 
 import './about.styl';
 
-class About extends React.Component {
+interface AboutState { about: string }
+
+class About extends React.Component<{}, AboutState> {
     constructor() {
         super();
         this.state = {
             about: ''
         };
 
-        let postFetch = Rx.Observable
+        let postFetch = Observable
             .fromPromise(fetch('/README.md'))
             .flatMap( p => p.text())
             .subscribe(
@@ -22,7 +24,7 @@ class About extends React.Component {
         );
     }
     render() {
-        let html = { __html: new MD().render(this.state.about) };
+        const html = { __html: new MarkdownIt().render(this.state.about) };
         return (<div className="aboutBlock" dangerouslySetInnerHTML={html}></div>)
     }
 }

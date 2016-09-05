@@ -4,6 +4,8 @@
 const webpack = require('webpack');
 const conf = require('./base.conf');
 
+conf.devtool = 'source-map';
+
 // Add Webpack Dev Server and Hot Dev Server
 conf.entry = [
     'webpack/hot/dev-server',

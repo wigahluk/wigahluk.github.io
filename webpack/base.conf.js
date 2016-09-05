@@ -5,9 +5,9 @@ const path = require('path');
 const basePath = process.cwd();
 const nodeModulesPath = path.resolve(basePath, 'node_modules');
 const buildPath = path.resolve(basePath, 'build');
-const entryPath = path.resolve(basePath, 'app', 'main.jsx');
+const entryPath = path.resolve(basePath, 'app', 'main.tsx');
 
-const postListPlugin = require('./postListPlugin');
+const PostListPlugin = require('./postListPlugin');
 
 const config = {
     entry: [ entryPath ],
@@ -18,8 +18,8 @@ const config = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
-                loader: 'babel',
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
                 exclude: [nodeModulesPath]
             },
             {
@@ -36,8 +36,11 @@ const config = {
             }
         ]
     },
+    resolve: {
+        extensions: ['', '.ts', '.tsx', '.js']
+    },
     plugins: [
-        new postListPlugin(),
+        new PostListPlugin(),
         new webpack.ProvidePlugin({
             'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
         })
