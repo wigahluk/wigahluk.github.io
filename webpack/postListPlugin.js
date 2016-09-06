@@ -70,12 +70,12 @@ function processFile(context, file, index) {
     }
     if(stats.isFile()) {
         return {
-            file: file,
-            name: file.substring(0, file.length-3),
+            path: file,
+            fileName: file.substring(0, file.length-3),
             title: title,
             date: stats.birthtime,
-            mdate: stats.mtime,
-            content: content
+            modifiedAt: stats.mtime,
+            rawContent: content
         };
     }
 }

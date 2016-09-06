@@ -12,8 +12,14 @@ import SinglePost from './posts/singlePost'
 
 import './main.styl';
 
+declare const require;
+const content = require("./wigahluk.json");
+
+const LinkedApp = (props: {children: any}) => <App posts={content.posts} children={props.children}></App>;
+
+
 const routes = (<Router history={hashHistory}>
-    <Route path="/" component={App}>
+    <Route path="/" component={LinkedApp}>
         <Route path="post/:postName" component={SinglePost}/>
         <Route path="about" component={About}/>
         <Route path="*" component={NoMatch}/>

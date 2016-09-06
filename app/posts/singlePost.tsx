@@ -1,12 +1,14 @@
 'use strict';
 
 import * as React from 'react';
-import {Observable} from 'rxjs';
 
 import PostView from './postView';
 import {Post} from '../models/post';
 
 import './posts.styl'
+
+declare const require;
+const content = require("../wigahluk.json");
 
 const Loading = () => (<div>Loading...</div>);
 
@@ -16,19 +18,8 @@ class SinglePost extends React.Component<{}, SinglePostState> {
     constructor(props) {
         super(props);
         this.state = {
-            post: undefined
+            post: content.posts.filter(p => p.fileName === props.params.postName)[0]
         };
-        let postName = props.params.postName;
-
-        Observable
-            .fromPromise(fetch('build/filelist.json'))
-            .flatMap( p => p.json())
-            .flatMap(array => Observable.from([].concat(array)))
-            .filter(e => e.name === postName)
-            .subscribe(
-            x => this.setState({post: x}),
-            e => console.log('onError: %s', e)
-        );
     }
 
     render() {

@@ -1,8 +1,9 @@
 export class Post {
-    file: string;
-    name: string;
+    absolutePath: string;
+    path: string;
+    fileName: string;
     title: string;
-    date: string;
-    mdate: string;
-    content: string
-};
+    date: Date;
+    rawContent: string;
+    modifiedAt: Date;
+}
