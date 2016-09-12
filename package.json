@@ -9,7 +9,7 @@
     "css-loader": "0.25.0",
     "es6-shim": "0.35.1",
     "exports-loader": "0.6.3",
-    "highland": "3.0.0-beta.2",
+    "highland": "3.0.0-beta.3",
     "http-server": "^0.9.0",
     "imports-loader": "0.6.5",
     "json-loader": "0.5.4",
@@ -37,6 +37,6 @@
     "react": "15.3.1",
     "react-dom": "15.3.1",
     "react-router": "2.7.0",
-    "rxjs": "5.0.0-beta.11"
+    "rxjs": "5.0.0-beta.12"
   }
 }

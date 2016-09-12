@@ -3,6 +3,10 @@
 const Hl = require('highland');
 const cli = require('./cli');
 const fs = require('fs');
+const rx = require('rxjs');
+
+const readFile = path => rx.Observable.bindNodeCallback(fs.readFile)(path, 'utf8');
+const writeFile = (path, data) => rx.Observable.bindNodeCallback(fs.writeFile)(path, data);
 
 function traverseRecursive (path, onFile, done) {
     if (fs.existsSync(path)) {
@@ -30,4 +34,8 @@ function traverse (srcPath) {
     });
 }
 
-module.exports = traverse;
+module.exports = {
+    traverse: traverse,
+    readFile: readFile,
+    writeFile: writeFile
+};

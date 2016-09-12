@@ -3,23 +3,34 @@ const cli = require('./cli');
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
+const streamFs = require('./streamFs');
 const pwd = process.cwd();
 
 
 const toMD = d => `* [${d.title}](${d.path}) (${moment(d.date).format('YYYY/MM/DD')})`;
 
+const processTemplate = payload => payload
+    .template
+    .replace(/\{\{about\}\}/g, payload.about)
+    .replace(/\{\{postList\}\}/g, payload.postList);
+
 const writeReadme = postList => {
     const tPath = path.resolve(pwd, './templates/README.tmd');
     const rPath = path.resolve(pwd, './README.md');
+    const aPath = path.resolve(pwd, './about.md');
 
-    fs.readFile(tPath, 'utf8', function (err, data) {
-        if (err) throw err;
-        data = data.replace(/\{\{postList\}\}/g, postList);
-        fs.writeFile (rPath, data, function(err) {
-            if (err) throw err;
+    streamFs.readFile(aPath)
+        .map(about => { return { about: about, postList: postList }})
+        .flatMap(payload => {
+            return streamFs.readFile(tPath).map(template => {
+                payload.template = template;
+                return payload;
+            })
+        })
+        .map(processTemplate).flatMap(text => streamFs.writeFile(rPath, text))
+        .subscribe(() => {
             cli.log('Readme file generated successfully.');
         });
-    });
 };
 
 blog.posts()

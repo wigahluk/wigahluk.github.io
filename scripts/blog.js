@@ -1,4 +1,4 @@
-const traverse = require('./traverse');
+const streamFs = require('./streamFs');
 const fs = require('fs');
 const path = require('path');
 const pwd = process.cwd();
@@ -40,7 +40,7 @@ const entryData = p => {
     };
 };
 
-const posts = () => traverse(postsPath)
+const posts = () => streamFs.traverse(postsPath)
     .filter(p => mdExt.test(p)) // Filter files that are MD.
     .map(entryData);
 
