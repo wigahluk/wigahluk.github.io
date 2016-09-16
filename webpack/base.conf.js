@@ -14,17 +14,15 @@ const config = {
         filename: 'bundle.js'
     },
     module: {
-        // preloaders: [
-        //     {
-        //         test: /wigahluk.json$/,
-        //         loader: 'wigahluk-loader'
-        //     }
-        // ],
         loaders: [
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
                 exclude: [nodeModulesPath]
+            },
+            {
+                test: /\.md$/,
+                loader: 'post-loader'
             },
             {
                 test: /wigahluk.json$/,
@@ -49,14 +47,11 @@ const config = {
     },
     resolveLoader: {
         alias: {
-            "wigahluk-loader": path.join(basePath, "./webpack/wigahluk-loader.js")
+            "wigahluk-loader": path.join(basePath, "./webpack/wigahluk-loader.js"),
+            "post-loader": path.join(basePath, "./webpack/post-loader.js")
         }
     },
-    plugins: [
-        new webpack.ProvidePlugin({
-            'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-        })
-    ]
+    plugins: []
 };
 
 module.exports = config;

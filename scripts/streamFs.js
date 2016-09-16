@@ -1,6 +1,5 @@
 'use strict';
 
-const Hl = require('highland');
 const cli = require('./cli');
 const fs = require('fs');
 const rx = require('rxjs');
@@ -24,12 +23,12 @@ function traverseRecursive (path, onFile, done) {
 
 function traverse (srcPath) {
     if (!fs.existsSync(srcPath)) {
-        return Hl([]);
+        return rx.Observable.empty();
     }
 
-    return Hl((push, next) => {
-        const onFile = path => { push(undefined, path); };
-        const done = () => { push(undefined, Hl.nil); };
+    return new rx.Observable(subscriber => {
+        const onFile = path => { subscriber.next(path); };
+        const done = () => { subscriber.complete(); };
         traverseRecursive(srcPath, onFile, done);
     });
 }

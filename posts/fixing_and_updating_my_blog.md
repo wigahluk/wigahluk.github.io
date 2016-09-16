@@ -20,3 +20,13 @@ Unfortunately, seems that using _TypeScript_ is no that easy, I got into the pro
 OK, seems that all is working again. `npm outdated` is not giving me any warnings. At least for the next minute, I’m up to date!
 
 After dealing with all these small issues I’m more and more tempted to start using a different approach like _ELM_ or _PureScript_. I’m just sort of tired of the JavaScript ecosystem.
+
+_Update Sep-15_ I have removed all need for doing AJAX calls. Also removed Highlands, I was using it for doing streaming in Node, instead I'm using RxJS also in the build process.
+
+_Update Sep-16_ I have removed React Router. Not a huge improvement on the bundle size, but at least I have less dependencies to worry about. 
+
+My TODO now is:
+
+* Remove Markdown-it and preprocess the files in the build process
+* Update my fonts and styles. I want to use Modern Latin now
+* Add MathJax support for writing some math on my posts.

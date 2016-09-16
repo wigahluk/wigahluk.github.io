@@ -34,7 +34,7 @@ const writeReadme = postList => {
 };
 
 blog.posts()
-    .toArray(data => {
+    .toArray().subscribe(data => {
         const list = data
             .sort((a,b) => b.date.valueOf() - a.date.valueOf())
             .map(toMD).
