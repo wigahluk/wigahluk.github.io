@@ -5,9 +5,9 @@ import * as React from 'react';
 import NabBar from './navBar/navBar';
 import Posts from './posts/posts';
 import {Post} from './models/post';
-import About from './about';
-import NoMatch from './noMatch';
-import PostView from "./posts/postView";
+import {About} from './about';
+import {NoMatch} from './noMatch';
+import {PostView} from "./posts/postView";
 
 
 const sections = [

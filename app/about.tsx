@@ -1,18 +1,11 @@
 'use strict';
 
 import * as React from 'react';
-import * as MarkdownIt from 'markdown-it';
-
 import './about.styl';
+import {MdView} from './posts/postView';
 
 declare const require;
 
-const text = require('../about.md');
+const about = require('../about.md');
 
-
-const About = () => {
-    const html = { __html: new MarkdownIt().render(text) };
-    return (<div className="aboutBlock" dangerouslySetInnerHTML={html}></div>)
-};
-
-export default About;
+export const About = () =>  <div className="aboutBlock"><MdView node={about} /></div>;

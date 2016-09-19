@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import {Post} from '../models/post';
-import PostView from './postView';
+import {PostView} from './postView';
 
 import './posts.styl'
 

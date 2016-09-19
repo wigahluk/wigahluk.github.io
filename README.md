@@ -7,7 +7,7 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
-* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/09/16)
+* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/09/18)
 * [Towards the End of Gender Discussion](posts/towards-the-end-of-gender-discussion.md) (2016/06/17)
 * [Moving to React and Webpack](posts/moving-to-react.md) (2016/03/06)
 * [Math JavaScript Libraries](posts/math-js-libraries.md) (2015/06/06)

@@ -5,5 +5,6 @@ export class Post {
     title: string;
     date: Date;
     rawContent: string;
+    content: any;
     modifiedAt: Date;
 }
