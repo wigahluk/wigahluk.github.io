@@ -5,7 +5,7 @@ import * as React from 'react';
 import './navBar.styl';
 import {ISection} from '../models/section';
 
-const NavBar = (props: { sections: ISection[] }) =>
+export const NavBar = (props: { sections: ISection[] }) =>
     <div className="navbar">
         <ul className="nabbar-list">
             {
@@ -13,5 +13,3 @@ const NavBar = (props: { sections: ISection[] }) =>
             }
         </ul>
     </div>;
-
-export default NavBar;

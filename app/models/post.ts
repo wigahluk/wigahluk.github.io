@@ -4,7 +4,6 @@ export class Post {
     fileName: string;
     title: string;
     date: Date;
-    rawContent: string;
     content: any;
     modifiedAt: Date;
 }

@@ -2,13 +2,14 @@
 
 import * as React from 'react';
 
-import NabBar from './navBar/navBar';
-import Posts from './posts/posts';
+import {NavBar} from './blogml/navBar';
+import {Posts, PostView, MdView} from './blogml/posts';
 import {Post} from './models/post';
-import {About} from './about';
-import {NoMatch} from './noMatch';
-import {PostView} from "./posts/postView";
 
+declare const require;
+const about = require('../about.md');
+
+import './about.styl';
 
 const sections = [
     { url: '/', displayText: 'wigahluk' },
@@ -16,6 +17,10 @@ const sections = [
 ];
 
 const rPost = /^\/post\/([^\/]+)$/;
+
+const About = () =>  <div className="aboutBlock"><MdView node={about} /></div>;
+
+const NoMatch = () => (<h1>404!</h1>);
 
 const routeElement = (posts: Post[], path: string) => {
     if (path === '/') return <Posts posts={ posts } />;
@@ -31,10 +36,10 @@ const routeElement = (posts: Post[], path: string) => {
     return <NoMatch />;
 };
 
-const App = (props: { posts: Post[], path: string }) => {
+export const App = (props: { posts: Post[], path: string }) => {
     return (
         <div>
-            <NabBar sections={sections} />
+            <NavBar sections={sections} />
             <div className="container-fluid">
                 { routeElement(props.posts, props.path) }
             </div>
@@ -42,5 +47,3 @@ const App = (props: { posts: Post[], path: string }) => {
         </div>
     );
 };
-
-export default App;
