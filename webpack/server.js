@@ -36,10 +36,13 @@ webpackSever();
 
 // Any requests to localhost:3000/build is proxied
 // to webpack-dev-server
-app.all('/build/*', function (req, res) {
+app.get('/build/*', function (req, res) {
     proxy.web(req, res, {
         target: 'http://localhost:8080'
     });
+});
+app.get(/\/.*/, function(request, response){
+    response.sendFile(path.resolve(basePath, 'index.html'));
 });
 
 // It is important to catch any errors from the proxy or the
