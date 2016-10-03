@@ -41,7 +41,12 @@ app.get('/build/*', function (req, res) {
         target: 'http://localhost:8080'
     });
 });
-app.get(/\/.*/, function(request, response){
+app.get(/\.hot-update\.json$/, function (req, res) {
+    proxy.web(req, res, {
+        target: 'http://localhost:8080'
+    });
+});
+app.get(/^\/[^(?:build)].*/, function(request, response){
     response.sendFile(path.resolve(basePath, 'index.html'));
 });
 

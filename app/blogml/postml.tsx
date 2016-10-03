@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Post} from '../models/post';
 
 interface INode { type: string }
 
@@ -7,6 +8,8 @@ export interface IBranch extends INode { children: INode[] }
 export interface ILeaf extends INode { content: string }
 
 export interface IHeading extends IBranch { h: string }
+
+export interface IDocument extends IBranch { title: string }
 
 interface ILink extends IBranch { attrs: any }
 
@@ -43,6 +46,8 @@ const Link = (node: ILink, index: string) => {
     attrs.key = index;
     return React.createElement('a', attrs, nodeToTags(node, index))
 };
+
+const PostLink = (post: Post) => <a href={post.path}>{post.title}</a>;
 
 const tags = {
     'heading': Heading,

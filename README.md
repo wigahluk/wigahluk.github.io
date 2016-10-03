@@ -7,7 +7,8 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
-* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/09/18)
+* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/10/02)
+* [Adding support for reading a single file](posts/adding-support-for-reading-a-single-file.md) (2016/10/02)
 * [Towards the End of Gender Discussion](posts/towards-the-end-of-gender-discussion.md) (2016/06/17)
 * [Moving to React and Webpack](posts/moving-to-react.md) (2016/03/06)
 * [Math JavaScript Libraries](posts/math-js-libraries.md) (2015/06/06)
@@ -15,7 +16,6 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 * [Data Visualization JavaScript Libraries](posts/data-visualization-js-libraries.md) (2015/05/22)
 * [Autogenerate the Index of Posts](posts/autogenerate-the-index-of-posts.md) (2015/05/17)
 * [Creating my own Showdown directive](posts/creating-my-own-showdown-directive.md) (2015/05/14)
-* [Adding support for reading a single file](posts/adding-support-for-reading-a-single-file.md) (2015/05/07)
 * [Implicit read and write objects for JSON in Play 2.3](posts/implicit-read-write-objects-play-2.3.md) (2014/12/21)
 * [Setting up this thing](posts/setting-up-this-thing.md) (2014/12/21)
 * [Adding Google Analytics](posts/adding-google-ax.md) (2014/12/13)

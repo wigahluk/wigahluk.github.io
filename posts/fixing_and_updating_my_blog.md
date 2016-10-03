@@ -25,7 +25,9 @@ _Update Sep-15_ I have removed all need for doing AJAX calls. Also removed Highl
 
 _Update Sep-16_ I have removed React Router. Not a huge improvement on the bundle size, but at least I have less dependencies to worry about. 
 
-_Update Sep-18_ I was able to remove _Markdown-it_ from the bundled dependencies. I'm not using _Commonmark.js_ as was my original intention because I'm planning to add some custom logic on the parsing and right ow _Commonmark.js_ doesn't support custom logic on its parser. 
+_Update Sep-18_ I was able to remove _Markdown-it_ from the bundled dependencies. I'm not using _Commonmark.js_ as was my original intention because I'm planning to add some custom logic on the parsing and right ow _Commonmark.js_ doesn't support custom logic on its parser.
+ 
+_Update Oct-02_ Created the Archive section.  Post count on home page is limited to 5. 
 
 My TODO now is:
 

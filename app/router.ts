@@ -37,6 +37,8 @@ const isDistinct = (path) => {
     return r;
 };
 
+export const onNavTo = (href: string) => event => { navigateTo(href) };
+
 export const navigateTo = (href: string) => {
     navigationListener.next(href);
     window.history.pushState(href, '', href);

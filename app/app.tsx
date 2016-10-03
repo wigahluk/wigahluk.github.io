@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import {NavBar} from './blogml/navBar';
 import {Posts, PostView, MdView} from './blogml/posts';
+import {Archive} from './blogml/archive';
 import {Post} from './models/post';
 
 declare const require;
@@ -13,10 +14,11 @@ import './about.styl';
 
 const sections = [
     { url: '/', displayText: 'wigahluk' },
-    { url: '/about', displayText: 'About' }
+    { url: '/about', displayText: 'About' },
+    { url: '/archive', displayText: 'Archive' }
 ];
 
-const rPost = /^\/post\/([^\/]+)$/;
+const rPost = /^\/posts\/([^\/]+)$/;
 
 const About = () =>  <div className="aboutBlock"><MdView node={about} /></div>;
 
@@ -25,9 +27,11 @@ const NoMatch = () => (<h1>404!</h1>);
 const routeElement = (posts: Post[], path: string) => {
     if (path === '/') return <Posts posts={ posts } />;
     if (path === '/about') return <About />;
-    const ms = rPost.exec(path);
-    if (ms) {
-        const post =  posts.filter(p => p.fileName === ms[1]);
+    if (path === '/archive') return <Archive posts={posts} />;
+
+    if (rPost.test(path)) {
+        const nPath = path.substr(1);
+        const post =  posts.filter(p => p.path === nPath);
         if (post && post.length > 0) {
             return <PostView post={post[0]} />;
         }
