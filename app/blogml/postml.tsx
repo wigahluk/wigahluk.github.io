@@ -1,19 +1,9 @@
 import * as React from 'react';
 import {Post} from '../models/post';
-
-interface INode { type: string }
-
-export interface IBranch extends INode { children: INode[] }
-
-export interface ILeaf extends INode { content: string }
-
-export interface IHeading extends IBranch { h: string }
-
-export interface IDocument extends IBranch { title: string }
-
-interface ILink extends IBranch { attrs: any }
-
-interface IImage extends ILeaf { attrs: any }
+import {IHeading, ILeaf, IBranch, IImage, ILink, INode} from './blogml';
+import {} from './codeBlock';
+import {CodeInline, CodeBlock} from "./codeBlock";
+import {CodeFenced} from "./codeBlock";
 
 const Heading = (node: IHeading, index: string) =>
     React.createElement('h' + node.h, { key: index }, nodeToTags(node, index));
@@ -32,10 +22,6 @@ const Image = (node: IImage, index: string) => {
     attrs.alt = node.content;
     return React.createElement('img', attrs)
 };
-
-const CodeInline = (node: ILeaf, index: string) => <code key={index}>{ node.content }</code>;
-
-const CodeBlock = (node: ILeaf, index: string) => <pre key={index}><code>{ node.content }</code></pre>;
 
 const BulletList = (node: IBranch, index: string) => <ul key={index}>{ nodeToTags(node, index) }</ul>;
 
@@ -60,7 +46,8 @@ const tags = {
     'list_item': ListItem,
     'code_block': CodeBlock,
     'image': Image,
-    'strong': TextStrong
+    'strong': TextStrong,
+    'fence': CodeFenced
 };
 
 const getTag = (node: INode, index: string) => {

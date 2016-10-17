@@ -19,6 +19,8 @@ app.use('/', express.static(publicPath));
 
 // Use a special folder for images in posts:
 app.use('/img/', express.static(path.resolve(basePath, 'img')));
+// Use a special folder for fonts and styles:
+app.use('/styles/', express.static(path.resolve(basePath, 'styles')));
 
 // As we are using a dummy folder as our root, we need to set the path for index.html and other files explicitly.
 // This is a bit of an issue, but I'm not expecting to add many static files anyway.

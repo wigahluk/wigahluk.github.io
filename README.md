@@ -7,7 +7,8 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
-* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/10/02)
+* [Writing My own Syntax Coloring Tool](posts/writing-my-own-syntax-coloring-tool.md) (2016/10/16)
+* [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/10/16)
 * [Adding support for reading a single file](posts/adding-support-for-reading-a-single-file.md) (2016/10/02)
 * [Towards the End of Gender Discussion](posts/towards-the-end-of-gender-discussion.md) (2016/06/17)
 * [Moving to React and Webpack](posts/moving-to-react.md) (2016/03/06)

@@ -10,8 +10,6 @@ import {Post} from './models/post';
 declare const require;
 const about = require('../about.md');
 
-import './about.styl';
-
 const sections = [
     { url: '/', displayText: 'wigahluk' },
     { url: '/about', displayText: 'About' },
@@ -20,7 +18,7 @@ const sections = [
 
 const rPost = /^\/posts\/([^\/]+)$/;
 
-const About = () =>  <div className="aboutBlock"><MdView node={about} /></div>;
+const About = () =>  <div className="aboutBlock content"><MdView node={about} /></div>;
 
 const NoMatch = () => (<h1>404!</h1>);
 

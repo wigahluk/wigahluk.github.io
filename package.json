@@ -6,29 +6,31 @@
   "repository": "https://wigahluk.github.io",
   "license": "The Artistic License 2.0",
   "devDependencies": {
-    "markdown-it": "8.0.0",
     "css-loader": "0.25.0",
     "es6-shim": "0.35.1",
     "exports-loader": "0.6.3",
     "http-server": "0.9.0",
     "imports-loader": "0.6.5",
+    "jasmine": "^2.5.2",
     "json-loader": "0.5.4",
+    "markdown-it": "8.0.0",
     "source-map-loader": "0.1.5",
     "style-loader": "0.13.1",
     "stylus": "0.54.5",
     "stylus-loader": "2.3.1",
     "ts-loader": "0.8.2",
-    "typescript": "1.8.10",
-    "typings": "1.3.3",
+    "typescript": "2.0.3",
+    "typings": "1.4.0",
     "webpack": "1.13.2",
-    "webpack-dev-server": "1.16.1"
+    "webpack-dev-server": "1.16.2"
   },
   "scripts": {
     "build:readme": "node ./scripts/build-readme.js",
     "build:webpack": "webpack -p --config webpack/build.conf.js",
     "build": "npm run build:readme && npm run build:webpack",
     "start": "node webpack/server.js",
-    "start:prod": "http-server -p 3000"
+    "start:prod": "http-server -p 3000",
+    "test": "jasmine"
   },
   "dependencies": {
     "moment": "2.15.1",

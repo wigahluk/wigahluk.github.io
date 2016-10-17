@@ -3,10 +3,12 @@
 import * as React from 'react';
 
 import {Post} from '../models/post';
-import {nodeToTags, IBranch, IHeading, IDocument} from '../blogml/postml';
+import {nodeToTags} from '../blogml/postml';
+import {IDocument, IBranch} from './blogml';
 
 import './posts.styl';
 import {Link} from './navigation';
+
 
 export const MdView = (props: { node: IBranch }) => <div>{ nodeToTags(props.node,'0') }</div>;
 
@@ -24,14 +26,14 @@ export const PostView = (props: { post: Post }) => {
     const birth = post.date;
     const update = post.modifiedAt;
     return (
-        <div className="post">
-            <div className="metadata">
+        <div className="post-container">
+            <div className="content metadata">
                 <div className="block">
                     <div className="timestamp">Created on {birth}</div>
                     <div className="timestamp">Updated on {update}</div>
                 </div>
             </div>
-            <div className="postContent">
+            <div className="content post">
                 <h1><Link href={`/${post.path}`}>{post.title}</Link></h1>
                 <MdViewWithLink node={post.content} path={'/#/post/' + post.fileName} />
             </div>

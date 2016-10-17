@@ -29,7 +29,9 @@ _Update Sep-18_ I was able to remove _Markdown-it_ from the bundled dependencies
  
 _Update Oct-02_ Created the Archive section.  Post count on home page is limited to 5. 
 
+_Update Oct-16_ Using Modern Latin 10pts. Also revisited all the styles in the blog and added some color
+syntax for fenced code with a very naive and simplistic lexer.
+
 My TODO now is:
 
-* Update my fonts and styles. I want to use Modern Latin now
 * Add MathJax support for writing some math on my posts.

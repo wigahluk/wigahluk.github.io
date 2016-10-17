@@ -20,7 +20,7 @@ const ArchiveItem = (props: { post: Post }) => {
 };
 
 export const Archive = (props: { posts: Post[] }) =>
-    <div className="archive">
+    <div className="archive content">
         <ul className="archive-list">
             {props.posts.map((p, i) => <li key={i}><ArchiveItem post={p} /></li>)}
         </ul>

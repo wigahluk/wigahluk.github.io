@@ -1,24 +1,22 @@
+@require "../styles/colors"
+@require "../styles/variables"
+
 .navbar
-    border-bottom 1px solid #CDD3D8
-    font-weight 400
-    font-family 'Raleway', Arial, Helvetica, Sans-serif
+    border-bottom 1px solid $color-border-light
     background-color rgba(0,0,0,0.05)
-    box-shadow 0px 3px 5px rgba(0,0,0,0.1)
+    font-weight 400
+    font-size 80%
+    font-family 'Raleway', Arial, Helvetica, Sans-serif
 
 .nabbar-list
-    max-width 900px
-    position relative
-    margin-left auto
-    margin-right auto
-    list-style none
+    content-box()
     li
-        line-height 48px
         display: inline
-        margin-right 20px
+        line-height 300%
+        margin-right 15px
         a
-            color: #949494
             cursor pointer
             text-decoration none
+
         a:hover
-            color: #75AAD8
             text-decoration none
