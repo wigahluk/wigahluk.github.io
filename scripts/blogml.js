@@ -16,11 +16,14 @@ const buildBranch = (token) => {
     return new Branch(type);
 };
 
+const remakeText = s => s.replace(/(\w+)'(s|t|m|ve)/g, '$1\u2019$2');
+
 const buildLeaf = (token) => {
     const type = token.type;
     const content = token.content;
     if (type === 'fence') return new Fence(token.info, content);
     if (type === 'image') { return new Image(token.attrs, content); }
+    if (type === 'text') { return new Leaf(type, remakeText(content)); }
     return new Leaf(type, content);
 };
 

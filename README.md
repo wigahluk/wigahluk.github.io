@@ -7,6 +7,7 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
+* [A NodeJS Proxy with no Dependencies](posts/a-nodejs-proxy.md) (2016/10/30)
 * [Writing My own Syntax Coloring Tool](posts/writing-my-own-syntax-coloring-tool.md) (2016/10/16)
 * [Fixing and Updating My Blog](posts/fixing_and_updating_my_blog.md) (2016/10/16)
 * [Adding support for reading a single file](posts/adding-support-for-reading-a-single-file.md) (2016/10/02)
