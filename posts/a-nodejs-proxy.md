@@ -4,7 +4,7 @@ A NodeJS Proxy with no Dependencies
 I recently needed to write a _proxy_ using Node. I've done this before using the `http-proxy` library
 which is pretty good. But on the new
 code I wanted to prevent the unnecessary proliferation of dependencies. My option was then to study a bit of
-how Node handles _requests,_ _responses_ and streams.
+how Node handles _requests_, _responses_ and streams.
  
 At the end, it resulted quite simple:
 

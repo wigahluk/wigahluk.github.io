@@ -8,7 +8,7 @@ import {CodeFenced} from "./codeBlock";
 const Heading = (node: IHeading, index: string) =>
     React.createElement('h' + node.h, { key: index }, nodeToTags(node, index));
 
-const Text = (node: ILeaf, index: string) => <span key={index}>{node.content} </span>;
+const Text = (node: ILeaf, index: string) => <span key={index}>{node.content}</span>;
 
 const Paragraph = (node: IBranch, index: string) => <p key={index}>{ nodeToTags(node, index) }</p>;
 
