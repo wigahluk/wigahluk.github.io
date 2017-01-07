@@ -4,37 +4,27 @@ const cli = require('./cli');
 const fs = require('fs');
 const rx = require('rxjs');
 
+// Lets tart binding lstat and readDir from FS to streams:
+const lstat = rx.Observable.bindNodeCallback(fs.lstat);
+const readDir = rx.Observable.bindNodeCallback(fs.readdir);
 const readFile = path => rx.Observable.bindNodeCallback(fs.readFile)(path, 'utf8');
 const writeFile = (path, data) => rx.Observable.bindNodeCallback(fs.writeFile)(path, data);
 
-function traverseRecursive (path, onFile, done) {
-    if (fs.existsSync(path)) {
-        fs.readdirSync(path).forEach(file => {
-            const curPath = `${path}/${file}`;
-            if (fs.lstatSync(curPath).isDirectory()) {
-                traverseRecursive(curPath, onFile);
-            } else {
-                onFile(curPath);
-            }
-        });
-        if (done) { done(); }
-    }
-}
-
-function traverse (srcPath) {
-    if (!fs.existsSync(srcPath)) {
-        return rx.Observable.empty();
-    }
-
-    return new rx.Observable(subscriber => {
-        const onFile = path => { subscriber.next(path); };
-        const done = () => { subscriber.complete(); };
-        traverseRecursive(srcPath, onFile, done);
+const traverse = path => lstat(path)
+    .flatMap(s => {
+        //
+        if (s.isDirectory()) {
+            // We are in a directory and we need to read its content
+            return readDir(path)
+                .flatMap(a => rx.Observable.from(a)) // we transform the array into another stream
+                .flatMap(p => traverse(`${path}/${p}`)); // and recurse
+        }
+        return rx.Observable.of(path);
     });
-}
 
 module.exports = {
     traverse: traverse,
     readFile: readFile,
-    writeFile: writeFile
+    writeFile: writeFile,
+    readDir: readDir
 };

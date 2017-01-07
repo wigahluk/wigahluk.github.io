@@ -5,7 +5,7 @@ module.exports = function(source) {
     this.cacheable && this.cacheable();
     // Preparing loader as async
     const done = this.async();
-    const mod = JSON.stringify(blog.parse(source))
+    const mod = JSON.stringify(blog.parse(source));
     done(null, `module.exports = ${mod};`);
 
 };

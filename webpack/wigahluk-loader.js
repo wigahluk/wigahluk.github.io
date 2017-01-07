@@ -6,21 +6,20 @@ module.exports = function(source) {
     // Preparing loader as async
     const done = this.async();
 
-    blog.posts().toArray().subscribe(data => {
-        data.forEach(p => { this.addDependency(p.absolutePath); });
-        const posts = data
-            .map(p => {
-                return {
+    blog.posts().toArray().subscribe(
+        data => {
+            data.forEach(p => { this.addDependency(p.absolutePath); });
+            const posts = data
+                .map(p => ({
                     path: p.path,
                     fileName: p.fileName,
                     title: p.title,
                     date: p.date,
                     content: p.content,
                     modifiedAt: p.modifiedAt
-                }
-            })
-            .sort((a,b) => b.date.valueOf() - a.date.valueOf());
-        const jsonString = JSON.stringify({ posts: posts });
-        done(null, `module.exports = ${jsonString};`);
-    });
+                }))
+                .sort((a,b) => b.date.valueOf() - a.date.valueOf());
+            const jsonString = JSON.stringify({ posts: posts });
+            done(null, `module.exports = ${jsonString};`);
+        });
 };
