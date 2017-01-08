@@ -8,7 +8,7 @@ module.exports = function(source) {
 
     blog.posts().toArray().subscribe(
         data => {
-            data.forEach(p => { this.addDependency(p.absolutePath); });
+            data.forEach(p => { this.addDependency(p.localPath); });
             const posts = data
                 .map(p => ({
                     path: p.path,

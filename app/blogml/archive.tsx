@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Post} from '../models/post';
 import {Link} from './navigation';
+import {TimeRange} from './timeRange';
 
 import './archive.styl'
 
@@ -12,8 +13,7 @@ const ArchiveItem = (props: { post: Post }) => {
         <div>
             <span className="blog-title"><Link href={`/${post.path}`}>{post.title}</Link></span>
             <div className="metadata">
-                <div className="timestamp">Created on {birth}</div>
-                <div className="timestamp">Updated on {update}</div>
+                <TimeRange updated={update} created={birth}/>
             </div>
         </div>
     );

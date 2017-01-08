@@ -19,8 +19,12 @@ const shortSha = () => rxChildProc('git rev-parse --short HEAD').map(s => s.toSt
 const created = path => rxChildProc(`git log --diff-filter=A --follow --format=%aD -1 -- ${path}`)
     .map(s => new Date(s.toString().trim()).valueOf());
 
+const updated = path => rxChildProc(`git log --format=%aD -1 -- ${path}`)
+    .map(s => new Date(s.toString().trim()).valueOf());
+
 module.exports = {
     sha: sha,
     shortSha: shortSha,
-    created: created
+    created: created,
+    updated: updated
 };

@@ -2,9 +2,10 @@ const archive = require('./archive')('./scripts/mocks');
 
 describe('Archive', () => {
     it('All Posts', done => {
-        archive.all().subscribe(
+        archive.all().filter(p => p.fileName === 'p1').subscribe(
             p => {
                 console.log(p);
+                expect(p.fileName).toBe('p1');
                 done();
             }
         );

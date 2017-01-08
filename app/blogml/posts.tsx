@@ -5,6 +5,7 @@ import * as React from 'react';
 import {Post} from '../models/post';
 import {nodeToTags} from '../blogml/postml';
 import {IDocument, IBranch} from './blogml';
+import {TimeRange} from './timeRange';
 
 import './posts.styl';
 import {Link} from './navigation';
@@ -29,8 +30,7 @@ export const PostView = (props: { post: Post }) => {
         <div className="post-container">
             <div className="content metadata">
                 <div className="block">
-                    <div className="timestamp">Created on {birth}</div>
-                    <div className="timestamp">Updated on {update}</div>
+                    <TimeRange created={birth} updated={update} />
                 </div>
             </div>
             <div className="content post">

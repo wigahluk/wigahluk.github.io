@@ -3,7 +3,7 @@ export class Post {
     path: string;
     fileName: string;
     title: string;
-    date: Date;
+    date: number;
     content: any;
-    modifiedAt: Date;
+    modifiedAt: number;
 }

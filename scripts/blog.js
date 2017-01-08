@@ -1,4 +1,5 @@
 const streamFs = require('./streamFs');
+const archive = require('./archive');
 const ml = require('./blogml');
 const md = require('markdown-it');
 const fs = require('fs');
@@ -25,9 +26,13 @@ const entryData = p => {
     };
 };
 
-const posts = () => streamFs.traverse(postsPath)
-    .filter(p => mdExt.test(p)) // Filter files that are MD.
-    .map(entryData);
+const posts = () => archive(postsPath).all()
+    .map(p => {
+        const c = parse(p.content);
+        p.content = c;
+        p.title = c.title;
+        return p;
+    });
 
 const reduceNodes = (tokens) => {
     const nodes = [];
