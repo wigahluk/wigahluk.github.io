@@ -14,7 +14,7 @@ const port =  3000;
 
 // We point our static assets to a dummy folder, so that when requesting for /build/* node doesn't use the built
 // files in the real folder.
-var publicPath = path.resolve(basePath, 'tmp');
+const publicPath = path.resolve(basePath, 'tmp');
 app.use('/', express.static(publicPath));
 
 // Use a special folder for images in posts:
