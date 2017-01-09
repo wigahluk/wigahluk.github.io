@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import {Post} from '../models/post';
-import {nodeToTags} from '../blogml/postml';
+import {nodeToTags} from './postml';
 import {IDocument, IBranch} from './blogml';
 import {TimeRange} from './timeRange';
 

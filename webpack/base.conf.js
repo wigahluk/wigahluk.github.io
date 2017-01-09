@@ -8,13 +8,13 @@ const buildPath = path.resolve(basePath, 'build');
 const entryPath = path.resolve(basePath, 'app', 'main.tsx');
 
 const config = {
-    entry: [ entryPath ],
+    entry: entryPath,
     output: {
         path: buildPath,
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
@@ -43,7 +43,7 @@ const config = {
         ]
     },
     resolve: {
-        extensions: ['', '.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js']
     },
     resolveLoader: {
         alias: {

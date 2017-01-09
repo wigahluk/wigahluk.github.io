@@ -1,4 +1,8 @@
-import {Observable, Subject} from 'rxjs'
+import {Observable} from 'rxjs/Observable'
+import {Subject} from 'rxjs/Subject'
+import 'rxjs/add/operator/merge'
+import 'rxjs/add/operator/filter'
+import 'rxjs/add/operator/map'
 import DOMElement = __React.DOMElement;
 
 interface ILocation {
@@ -70,4 +74,4 @@ export class HistoryListener extends Observable<string> {
 }
 
 export const listenNavigation = (win: IWindow) =>
-    navigationListener.merge(new HashListener(win)).merge(new HistoryListener(win)).filter(isDistinct);
+    navigationListener.asObservable().merge(new HashListener(win)).merge(new HistoryListener(win)).filter(isDistinct);

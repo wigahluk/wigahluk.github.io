@@ -7,6 +7,7 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
+* [ Migrating to Webpack 2](posts/migrating-to-webpack2.md) (2017/01/08)
 * [ A NodeJS Proxy with no Dependencies](posts/a-nodejs-proxy.md) (2016/10/30)
 * [ Writing My own Syntax Coloring Tool](posts/writing-my-own-syntax-coloring-tool.md) (2016/10/16)
 * [ Towards the End of Gender Discussion](posts/towards-the-end-of-gender-discussion.md) (2016/09/04)

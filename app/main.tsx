@@ -16,6 +16,5 @@ const content = require("./wigahluk.json");
 const historyListener = listenNavigation(window);
 
 historyListener
-    .do(path => {console.log(path)})
     .map(path => <App posts={content.posts} path={path}></App>)
     .subscribe(app => { ReactDOM.render(app, document.getElementById('app')); });
