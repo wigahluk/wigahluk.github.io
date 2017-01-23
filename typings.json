@@ -1,10 +1,7 @@
 {
   "globalDependencies": {
-    "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504",
-    "react": "registry:dt/react#0.14.0+20160829191040",
-    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504"
   },
   "dependencies": {
-    "markdown-it": "registry:npm/markdown-it#4.0.0+20160704212804"
   }
 }

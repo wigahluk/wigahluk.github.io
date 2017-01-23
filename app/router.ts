@@ -3,7 +3,6 @@ import {Subject} from 'rxjs/Subject'
 import 'rxjs/add/operator/merge'
 import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/map'
-import DOMElement = __React.DOMElement;
 
 interface ILocation {
     hash: string;

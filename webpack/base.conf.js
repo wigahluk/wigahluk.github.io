@@ -51,7 +51,8 @@ const config = {
             "post-loader": path.join(basePath, "./webpack/post-loader.js")
         }
     },
-    plugins: []
+    plugins: [],
+    externals: { react: 'React', 'react-dom': 'ReactDOM' }
 };
 
 module.exports = config;

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import 'es6-shim'
+import 'es6-shim/es6-shim.min'
 
 import {App} from './app';
 
