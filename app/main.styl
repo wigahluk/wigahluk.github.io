@@ -12,6 +12,7 @@ body
   background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2YyZjJmMiI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNmYWZhZmEiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Y2ZjZmNiI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=")
 
 h1, h2, h3, h4, h5, h5
+  color: $color-header
   line-height 120%
   font-family 'Lato', Arial, Helvetica, Sans-serif
   font-weight 400
@@ -21,19 +22,24 @@ h1, h2, h3, h4, h5, h5
     color $color-header-link-hover
 
 h1
-  font-size 220%
-  margin-bottom 6vh
-  margin-top 4vh
+  font-size 200%
+  margin-bottom 4vh
+  margin-top 3vh
+  padding-bottom 1vh
+  padding-top 1vh
+  border-bottom 1px solid $color-header-border;
+  border-top 1px solid $color-header-border;
+  
 h2
-  font-size 190%
-  margin-bottom 3.5vh
-  margin-top 5vh
-h3
   font-size 160%
-  margin-bottom 2.6vh
+  margin-bottom 2vh
   margin-top 4vh
+h3
+  font-size 140%
+  margin-bottom 1.5vh
+  margin-top 3vh
 h4
-  font-size 130%
+  font-size 120%
 h5
   font-size 100%
 h6
@@ -53,13 +59,22 @@ a:hover
   ul
     list-style-type none
     position relative
-
+    margin-bottom 1.5vw
+  li
+    li
+      margin-left 2vw
+    ul
+      margin-bottom 0
+    p
+      margin 0
+      margin-left 2vw
   li:before
-    content "\2022"
-    float left
-    font-size 90%
-    line-height 170%
-    margin-right 1vw
+    content: "\2022"
+    float: left
+    color: #808080
+    font-size: 150%
+    line-height: 79%
+    margin-right: 0.1vw
 
 pre
   font-size 75%

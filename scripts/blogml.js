@@ -16,7 +16,7 @@ const buildBranch = (token) => {
     return new Branch(type);
 };
 
-const remakeText = s => s.replace(/^([^\.,\?!])/, ' $1').replace(/(\w+)'(s|t|m|ve)/g, '$1\u2019$2');
+const remakeText = s => s.replace(/^([^\.,\?!])/, ' $1').replace(/(\w+)'(s|t|m|ve|ll)/g, '$1\u2019$2');
 
 const buildLeaf = (token) => {
     const type = token.type;

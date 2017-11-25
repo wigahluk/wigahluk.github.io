@@ -10,12 +10,12 @@ const ArchiveItem = (props: { post: Post }) => {
     const birth = post.date;
     const update = post.modifiedAt;
     return (
-        <div>
+        <p>
             <span className="blog-title"><Link href={`/${post.path}`}>{post.title}</Link></span>
             <div className="metadata">
                 <TimeRange updated={update} created={birth}/>
             </div>
-        </div>
+        </p>
     );
 };
 
