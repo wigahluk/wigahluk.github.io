@@ -7,6 +7,7 @@ Part of that everything is my most recent attempt to keep a blog, this time as a
 
 ## Content
 
+* [ RxJS a la Redux](posts/rxjs-a-la-redux.md) (2017/11/24)
 * [ Migrating to Webpack 2](posts/migrating-to-webpack2.md) (2017/01/08)
 * [ A NodeJS Proxy with no Dependencies](posts/a-nodejs-proxy.md) (2016/10/30)
 * [ Writing My own Syntax Coloring Tool](posts/writing-my-own-syntax-coloring-tool.md) (2016/10/16)
