@@ -20,6 +20,6 @@ module.exports = function(source) {
                 }))
                 .sort((a,b) => b.date.valueOf() - a.date.valueOf());
             const jsonString = JSON.stringify({ posts: posts });
-            done(null, `module.exports = ${jsonString};`);
+            done(null, `${jsonString}`);
         });
 };
